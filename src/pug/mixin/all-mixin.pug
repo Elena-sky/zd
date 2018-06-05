@@ -1,0 +1,104 @@
+//- link
+mixin link(href,text)
+	a(href= href )= text
+		block
+//- link item
+mixin nav-link(href,text,mod)
+	li.nav-item
+		a(class=`nav-link ${mod}` , href= href )= text
+
+//- socials
+mixin socials(name, url, mod)
+	ul.socials
+		- var socials = [{name: "fb", url: "#"},{name: "tw", url: "#"},{name: "in", url: "#"},{name:"pin",  url: "#"}];
+			each social in socials
+				li.socials-item
+					a.socials-link(href=`${social.url}`, target="_blank")
+						svg(class=`icon icon-${social.name}`)
+							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
+
+//- socials
+mixin card-socials(name, url)
+	ul.socials.card-socials
+		- var socials = [{name: "fb", url: "#"},{name:"pin",  url: "#"},{name: "tw", url: "#"},{name: "dots", url: "#"}];
+			each social in socials
+				li.socials-item
+					a.socials-link(href=`${social.url}`, target="_blank")
+						svg(class=`icon icon-${social.name}`)
+							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
+
+//- footer-socials
+mixin footer-socials(name, url, mod)
+	ul.footer-socials
+		- var socials = [{name: "fb-color", url: "#"},{name: "tw-color", url: "#"},{name: "in-color", url: "#"},{name:"pin-color",  url:"#"}];
+			each social in socials
+				li.socials-item
+					a.socials-link(href=`${social.url}`, target="_blank")
+						svg(class=`icon icon-${social.name}`)
+							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
+
+//- scroll top button
+mixin scrollTop
+	button#scrollTop.rounded-circle( title='Go to top')
+		+icon('down-arrow')
+
+//- Filter show button
+mixin filterShow
+	a#filterShow.filterShow(href='#')
+		+icon('filter')
+		+icon('cancel')
+		span Filters
+
+//- scroll top button
+mixin filterHide
+	button#filterHide.rounded-circle
+		+icon('cancel')
+
+
+//- mobile search
+mixin mobile-search
+	.mobile-search
+		button#showSearch.btn
+			+icon('search')
+
+//- showSearch modal
+mixin showSearchModal
+	.showSearch
+		form.navbar-form
+			input.form-control(placeholder='Search celebrity ...', value='')
+			button(type="button")#hideSearch.btn cancel
+
+
+//card-text
+mixin card-text
+	p Summer and fashion don’t always go hand in hand for men. Looking good comes easy when the temperatures drop. You can letyour innerlumberjack shine, and chances are you’ll look fine. But Summer… that’s a different monster. Off the top of the head, you probably associate Summer styles with the preppy look: pink shorts, polos, Topsiders. And while they definitely have the spirit of comfort down, preppy does not have a monopoly on warm looks. Whether you want edgy, athletic, rugged, or anything in between, this is the Summer to step it up and make it happen. We're hoping for sunny days in our future and plotting for the Summer's wardrobe change-ups. Sure, we've carried over some of our go-to Spring pieces this season, but we're craving clever new style solutions for the toasty temperatures coming our way.
+	p So we're looking to the streets for some inspiration from both everyday women and street style stars. Think bold prints and colors, retro influences, and the easiest way to wear breezy wide-leg pants, all styled in a way that's simple to try yourself. So whether you're in need of some office-appropriate inspiration or looking for ideas on what to pack for an upcoming vacation, it's all right here. Read on to kick-start your outfits and make this Summer your most fashionable ever.
+
+
+//calendar-tooltip
+mixin calendar-tooltip(link)
+	.calendar-tooltip
+		button.btn-close.btn-tooltip-close
+			span.fa.fa-close.text-white
+		.panel-header.bg-pink.text-white.p-1
+			h4#map-tooltip-title.text-center Naturalia Tolbiac
+		.panel-content
+			.row.p-3
+				.col-xs-8
+					p
+						| 71, rue de Tolbiac,
+						br
+						|  PARIS 75013,
+						br
+						|  Magasin vrac
+					button.btn.btn-success.w-100.text-center(type='button', data-toggle='modal',data-target=link)
+						|  More information
+				.col-xs-4
+					img.img-responsive.m-auto(src='assets/img/calendar/pin-01.png')
+
+//- sprite
+include svg-sprite
+
+//- breadcrumbs
+include breadcrumbs
+
