@@ -30,11 +30,11 @@ html(lang="en")
 								.row
 									.col-md-3.col-sm-12.mt-3
 										.d-block
-											a.btn-primary.btn3d(href="#")
+											a.btn-primary.btn3d(href="#", data-toggle="modal", data-target="#loginModal")
 												span Sign Up
 												i.fa.fa-chevron-right
 										.d-block
-											a.btn-success.btn3d.mb-0(href="#", data-toggle="modal", data-target="#loginModal")
+											a.btn-success.btn3d.mb-0(href="#")
 												span Login
 												i.fa.fa-chevron-right
 									.col-md-9.col-sm-12.py-3
@@ -84,15 +84,15 @@ html(lang="en")
 								.d-block
 									img.img-responsive(src="assets/img/global/man.png")
 							.col-xs-8.pr-5
-								.welcome-modal.step.step-1(data-step='1')
+								.welcome-modal.step.step-1.bounceInDown(data-step='1')
 									h3.welcome-modal--title Welcome & Congrats
 									p.welcome-modal--text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-								.welcome-modal.step.step-2(data-step='2')
-									p.welcome-modal--text Nice to meet yoou! My name is SMOGEY, and I’m really happy that you’re here.
+								.welcome-modal.step.step-2.bounceInDown(data-step='2')
+									p.welcome-modal--text Nice to meet you! My name is SMOGEY, and I’m really happy that you’re here.
 									p.welcome-modal--text During the following months I’ll be here to help you in the waste reducing.
 									p.welcome-modal--text.text-bold What’s your name my friend?
 									input#welcome-user-name(type="text", placeholder="Name", name="welcome-user--name", value="",required).welcome-modal--input
-								.welcome-modal.step.step-3(data-step='3')
+								.welcome-modal.step.step-3.bounceInDown(data-step='3')
 									h3.welcome-modal--title 3
 									p.welcome-modal--text 3 text
 							.col-xs-12

@@ -72,4 +72,13 @@
 			border-right-width: 0;
 		}
 	}
+	&.multi-step{
+		top: 20%;
+		.modal-dialog{
+			display: block;
+			min-width: 80%;
+			overflow: hidden;
+		}
+
+	}
 }
