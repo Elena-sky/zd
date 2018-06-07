@@ -50,15 +50,16 @@
                   </div>
                 </div>
               </div>
-              <div class="jumbotron p-3">
+              <div class="jumbotron px-3 py-0">
                 <div class="row">
-                  <div class="col-sm-2">
-                    <div class="d-block mb-3"><a class="btn btn-primary btn3d" href="#">Sign Up<i class="fa fa-chevron-right"></i></a></div>
-                    <div class="d-block"><a class="btn btn-success btn3d" href="#">Login<i class="fa fa-chevron-right"></i></a></div>
+                  <div class="col-md-3 col-sm-12 mt-3">
+                    <div class="d-block"><a class="btn-primary btn3d" href="#"><span>Sign Up</span><i class="fa fa-chevron-right"></i></a></div>
+                    <div class="d-block"><a class="btn-success btn3d mb-0" href="#" data-toggle="modal" data-target="#loginModal"><span>Login</span><i class="fa fa-chevron-right"></i></a></div>
                   </div>
-                  <div class="col-sm-10">
-                    <p class="text-left">
-                      L’outil ZD va vous aider dans la démarche de réduction de vos déchets. En effet, noussommes de plus en plus à être conscient de l’impact de l’homme sur la planète...Il faut
+                  <div class="col-md-9 col-sm-12 py-3">
+                    <p class="text-left mb-0">
+                      L’outil ZD va vous aider dans la démarche de réduction de vos déchets. En effet,nous
+                      sommes de plus en plus à être conscient de l’impact de l’homme sur la planète...Il faut
                       d’ailleur savoir que xxxxx tonnes de déchets se retrouve chaque année dans les océans…
                     </p>
                   </div>
@@ -70,7 +71,7 @@
                     <div class="panel-header">
                       <h3 class="text-center">Introduisez vos donnees</h3>
                     </div>
-                    <div class="panel-body"><img src="assets/img/initi/initi-01.png" alt="#"/></div>
+                    <div class="panel-body"><img src="assets/img/global/follow.gif" alt="#"/></div>
                   </div>
                 </div>
                 <div class="col-sm-6 col-xs-12 px-1">
@@ -78,7 +79,7 @@
                     <div class="panel-header">
                       <h3 class="text-center">Suivez votre evolution</h3>
                     </div>
-                    <div class="panel-body"><img src="assets/img/initi/initi-02.png" alt="#"/></div>
+                    <div class="panel-body"><img src="assets/img/global/introduce-data.gif" alt="#"/></div>
                   </div>
                 </div>
                 <div class="col-sm-6 col-xs-12 px-1">
@@ -86,7 +87,7 @@
                     <div class="panel-header">
                       <h3 class="text-center">Revecez des conseils adaptes</h3>
                     </div>
-                    <div class="panel-body"><img src="assets/img/initi/initi-03.png" alt="#"/></div>
+                    <div class="panel-body"><img src="assets/img/global/reveive.gif" alt="#"/></div>
                   </div>
                 </div>
                 <div class="col-sm-6 col-xs-12 px-1">
@@ -94,7 +95,7 @@
                     <div class="panel-header">
                       <h3 class="text-center">Reduisez vos dechets</h3>
                     </div>
-                    <div class="panel-body"><img src="assets/img/initi/initi-01.png" alt="#"/></div>
+                    <div class="panel-body"><img src="assets/img/global/progress.gif" alt="#"/></div>
                   </div>
                 </div>
               </div>
@@ -102,6 +103,31 @@
           </article>
         </div>
       </section>
+    </div>
+    <!-- Login modal-->
+    <div class="modal fade" id="loginModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header pb-0">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="d-block"><img class="img-responsive" src="assets/img/global/man.png"/></div>
+              </div>
+              <div class="col-xs-8 pr-5">
+                <div class="welcome-modal">
+                  <h3 class="welcome-modal--title">Welcome & Congrats</h3>
+                  <p class="welcome-modal--text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                </div>
+              </div>
+              <div class="col-xs-12"><a class="welcome-modal--next" href="#"><i class="fa fa-arrow-right"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

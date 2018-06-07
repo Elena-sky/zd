@@ -10,10 +10,13 @@
 	}
 	&-header{
 		border-bottom: 0;
+		.close{
+			margin-top: -10px;
+		}
 	}
 	&-content{
 		border: 0;
-		border-radius: 0 0 4px 4px;
+		border-radius: 5px;
 	}
 	&-title{
 		display: inline-block;

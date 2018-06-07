@@ -26,19 +26,20 @@ html(lang="en")
 										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
 										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
 											span Acceuil
-							.jumbotron.p-3
+							.jumbotron.px-3.py-0
 								.row
-									.col-sm-2
-										.d-block.mb-3
-											a.btn.btn-primary.btn3d(href="#")
-												| Sign Up
+									.col-md-3.col-sm-12.mt-3
+										.d-block
+											a.btn-primary.btn3d(href="#")
+												span Sign Up
 												i.fa.fa-chevron-right
 										.d-block
-											a.btn.btn-success.btn3d(href="#")
-												| Login
+											a.btn-success.btn3d.mb-0(href="#", data-toggle="modal", data-target="#loginModal")
+												span Login
 												i.fa.fa-chevron-right
-									.col-sm-10
-										p.text-left L’outil ZD va vous aider dans la démarche de réduction de vos déchets. En effet, nous
+									.col-md-9.col-sm-12.py-3
+										p.text-left.mb-0 L’outil ZD va vous aider dans la démarche de réduction de vos déchets. En effet,
+											| nous
 											| sommes de plus en plus à être conscient de l’impact de l’homme sur la planète...Il faut
 											| d’ailleur savoir que xxxxx tonnes de déchets se retrouve chaque année dans les océans…
 							.row.mx-0.mb-20
@@ -47,28 +48,49 @@ html(lang="en")
 										.panel-header
 											h3.text-center Introduisez vos donnees
 										.panel-body
-											img(src='assets/img/initi/initi-01.png', alt='#')
+											img(src='assets/img/global/follow.gif', alt='#')
 
 								.col-sm-6.col-xs-12.px-1
 									.panel.panel-success.pt-4
 										.panel-header
 											h3.text-center Suivez votre evolution
 										.panel-body
-											img(src='assets/img/initi/initi-02.png', alt='#')
+											img(src='assets/img/global/introduce-data.gif', alt='#')
 
 								.col-sm-6.col-xs-12.px-1
 									.panel.panel-pink.pt-4
 										.panel-header
 											h3.text-center Revecez des conseils adaptes
 										.panel-body
-											img(src='assets/img/initi/initi-03.png', alt='#')
+											img(src='assets/img/global/reveive.gif', alt='#')
 
 								.col-sm-6.col-xs-12.px-1
 									.panel.panel-warning.pt-4
 										.panel-header
 											h3.text-center Reduisez vos dechets
 										.panel-body
-											img(src='assets/img/initi/initi-01.png', alt='#')
+											img(src='assets/img/global/progress.gif', alt='#')
+
+		// Login modal
+		#loginModal.modal.fade(role='dialog')
+			.modal-dialog
+				// Modal content
+				.modal-content
+					.modal-header.pb-0
+						button.close(type='button' data-dismiss='modal') &times;
+					.modal-body
+						.row
+							.col-xs-4
+								.d-block
+									img.img-responsive(src="assets/img/global/man.png")
+							.col-xs-8.pr-5
+								.welcome-modal
+									h3.welcome-modal--title Welcome & Congrats
+									p.welcome-modal--text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+							.col-xs-12
+								a(href="#").welcome-modal--next
+									i.fa.fa-arrow-right
+
 
 
 

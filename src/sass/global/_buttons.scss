@@ -54,7 +54,15 @@
 		font-size: 14px;
 	}
 }
+.btn-outline-success {
+	color: $success;
+	background-color: $white;
+}
 
+.btn-outline-warning {
+	color: $warning;
+	background-color: $white;
+}
 .btn-pink {
 	background-color: $pink;
 	&:focus,
@@ -107,6 +115,7 @@
 	}
 }
 .btn3d {
+	display: inline-block;
 	border-radius: 25px;
 	min-width: 160px;
 	font-family: Arial;
@@ -118,11 +127,20 @@
 	top: -6px;
 	border: 0;
 	transition: all 40ms linear;
-	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 2px;
 	margin-right: 2px;
 	padding: 6px 15px;
+	text-align: center;
+	span{
+		position: absolute;
+		left: 50%;
+		margin-left: -50%;
+		width: 100%;
+		text-align: center !important;
+		text-decoration: none;
+		transition: 0.5s;
+	}
 	&:before {
 		top: 0;
 		position: absolute;
@@ -133,13 +151,28 @@
 		height: 50%;
 		background: #fff;
 		opacity: .1;
+		transition: 0.5s;
 	}
 	.fa {
-		line-height: 33px;
-		float: right;
-		margin-left: 10px;
-		display: inline-block;
-		vertical-align: middle;
+		position: absolute;
+		opacity: 0;
+		top: 14px;
+		right: 10px;
+		transition: 0.5s;
+	}
+	&:hover{
+		text-decoration: none;
+		text-align: left;
+		span{
+			left: 40%;
+		}
+		&:before {
+			top: 23px;
+		}
+		.fa{
+			opacity: 1;
+			right: 20px;
+		}
 	}
 }
 
@@ -202,5 +235,20 @@
 	&.active {
 		box-shadow:  0 1px 3px 1px rgba(0, 0, 0, 0.3);
 		background-color: $danger;
+	}
+}
+
+button.close{
+	float: right;
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .5;
+	filter: alpha(opacity=20);
+	&:hover,
+	&:focus{
+		outline: none;
 	}
 }
