@@ -21,10 +21,6 @@
                 // at the last step, nothing else to show
                 return;
             }
-            var animateWelcomeText = function () {
-                $('.welcome-modal .animated').removeClass('animated');
-                $(this).addClass('animated');
-            };
             to_show.toggleClass('d-block animated');
             findFirstFocusableInput(to_show).focus();
         }
@@ -74,7 +70,6 @@
                 })
             }
         }
-
         initialize();
     })
 }(jQuery);
