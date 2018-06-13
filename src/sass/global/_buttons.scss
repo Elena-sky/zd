@@ -256,7 +256,7 @@ button.close{
 	margin: 2rem auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	width: 160px;
 	height: 40px;
@@ -268,6 +268,7 @@ button.close{
 	color: $white;
 	overflow: visible;
 	z-index: 5;
+	transition: all 2s ease-out;
 	&:after{
 		content: "\f061";
 		font-family: FontAwesome;
@@ -284,7 +285,12 @@ button.close{
 		background-color: $white;
 		border-radius: 50%;
 		z-index: 10;
-
+		transition: all 1s ease-out;
+		-webkit-transform: rotateZ(720deg);
+		-moz-transform: rotateZ(720deg);
+		transform: rotateZ(720deg);
+		animation-duration: 1s;
+		animation-name: slideIn;
 	}
 	&:focus,
 	&:hover{
@@ -294,24 +300,36 @@ button.close{
 		justify-content: flex-end;
 		transition: 0.5s;
 		&:after{
-			//left: 0;
+			right: 70%;
 			user-select: none;
-			-webkit-transition:all 4s ease-out;
-			-moz-transition:all  4s ease-out;
-			transition:all  4s ease-out;
-			-webkit-transform: rotateZ(-720deg), translateX(-100%);
-			-moz-transform: rotateZ(-720deg), translateX(-100%);
-			transform: rotateZ(-720deg), translateX(-100%);
+			transition: all 1s ease-out;
+			-webkit-transform: rotateZ(-720deg);
+			-moz-transform: rotateZ(-720deg);
+			transform: rotateZ(-720deg);
+			animation-duration: 1s;
+			animation-name: slideOut;
 		}
 	}
+	&:active{
+		zoom: 0.95;
+	}
 }
-@-webkit-keyframes reverse {
-	0% {
+@keyframes slideOut {
+	from {
 		right: 0;
-		//transform: rotate(0deg);
 	}
-	100% {
-		left: 0;
-		//transform: rotate(-360deg);
+
+	to {
+		right: 70%;
 	}
+}
+@keyframes slidein {
+	from {
+		right: 70%;
+	}
+
+	to {
+		right: 0;
+	}
+
 }
