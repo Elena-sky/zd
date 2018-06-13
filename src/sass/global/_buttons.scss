@@ -252,3 +252,66 @@ button.close{
 		outline: none;
 	}
 }
+.create-btn__next-step{
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 160px;
+	height: 40px;
+	border-radius: 25px;
+	background: $info;
+	position: relative;
+	text-align: left;
+	padding: 10px 15px;
+	color: $white;
+	overflow: visible;
+	z-index: 5;
+	&:after{
+		content: "\f061";
+		font-family: FontAwesome;
+		position: absolute;
+		right: 0;
+		display: flex;
+		font-size: 30px;
+		justify-content: center;
+		align-items: center;
+		color: $info;
+		width: 60px;
+		height: 60px;
+		border: 6px solid $pink;
+		background-color: $white;
+		border-radius: 50%;
+		z-index: 10;
+
+	}
+	&:focus,
+	&:hover{
+		text-decoration: none;
+		cursor: pointer;
+		color: $white;
+		justify-content: flex-end;
+		transition: 0.5s;
+		&:after{
+			//left: 0;
+			user-select: none;
+			-webkit-transition:all 4s ease-out;
+			-moz-transition:all  4s ease-out;
+			transition:all  4s ease-out;
+			-webkit-transform: rotateZ(-720deg), translateX(-100%);
+			-moz-transform: rotateZ(-720deg), translateX(-100%);
+			transform: rotateZ(-720deg), translateX(-100%);
+		}
+	}
+}
+@-webkit-keyframes reverse {
+	0% {
+		right: 0;
+		//transform: rotate(0deg);
+	}
+	100% {
+		left: 0;
+		//transform: rotate(-360deg);
+	}
+}
