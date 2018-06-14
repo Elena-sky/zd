@@ -29,19 +29,19 @@ html(lang="en")
 							.row
 								.col-xs-12
 									.progress-block
-										.progress-circle.progress-30
-											span 30
+										.progress-circle.progress-60
+											span 60
 							.row
-								.col-xs-8
-									h3.mb-3 Combien d’adultes etes-vous a la maison?
 								.col-xs-12
-
-									include global/count-persons
-							.row.mb-20
-								.col-xs-8
-									h3.mb-3 Combien d’enfants avez-vous a la maison?
-								.col-xs-12
-									include global/count-childs
+									.garden
+										img.img-responsive(src="assets/img/global/garden.jpg")
+										.garden-inner
+											a.btn-pink.btn3d.garden-btn(href="#")
+												i.fa.fa-times-circle
+												span No
+											a.btn-info.btn3d.garden-btn(href="#")
+												i.fa.fa-check-circle
+												span Yes
 
 							.row
 								.text-center

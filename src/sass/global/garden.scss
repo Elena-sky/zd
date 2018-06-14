@@ -1,0 +1,45 @@
+.garden{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	position: relative;
+	img{
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+	}
+	&-inner{
+		display: flex;
+		flex-direction:row;
+		justify-content: space-between;
+		align-items: center;
+		width: 50%;
+		height: 60%;
+		position: absolute;
+		left: 25%;
+		top: 20%;
+	}
+	&-btn{
+
+		.fa{
+			left: 0;
+			right: inherit;
+			top: 3px;
+			font-size: 43px;
+		}
+
+		&:hover,
+		&:focus{
+			.fa{
+				left: 5px;
+				right: inherit;
+			}
+			span{
+				left: 60%;
+			}
+
+		}
+	}
+}

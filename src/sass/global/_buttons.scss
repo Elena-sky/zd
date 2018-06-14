@@ -132,6 +132,7 @@
 	margin-right: 2px;
 	padding: 6px 15px;
 	text-align: center;
+	overflow: hidden;
 	span{
 		position: absolute;
 		left: 50%;
@@ -225,6 +226,16 @@
 	&.active {
 		box-shadow:  0 1px 3px 1px rgba(0, 0, 0, 0.3);
 		background-color: $warning;
+	}
+}
+.btn3d.btn-pink {
+	box-shadow: 0 4px 0 0 darken($pink, 10%), 0 4px 8px 1px rgba(0, 0, 0, .2);
+	background-color: $pink;
+	color: $white;
+	&:active,
+	&.active {
+		box-shadow:  0 1px 3px 1px rgba(0, 0, 0, 0.3);
+		background-color: $pink;
 	}
 }
 
