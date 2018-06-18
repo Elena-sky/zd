@@ -33,29 +33,14 @@ html(lang="en")
 											span 85
 							.row.mx-0.mb-20
 								.col-xs-12.px-1
-									.panel.panel-pink.pt-4
-										.panel-header
-											h3.text-center Quelle est votre code postal?
-										.panel-body
-											img.mb-3(src='assets/img/global/zipcode.png', alt='#')
-											.row.py-3
-												.col-sm-6.col-sm-offset-3
-													input(type="text", placeholder="7500, Tournai", name="zipcode",
-													value="",required).welcome-modal--input
-
-							.row
-								.text-center
-									a(href="#").create-btn__next-step Suivant
-
-
-
-
-	script(src="assets/js/multi-step-modal.js")
-	script.
-		sendEvent = function (sel, step) {
-			$(sel).trigger('next.m.' + step);
-		}
-
+									section.widget.widget_blog_subscription
+										form#subscribe-blog(action='#', method='post', accept-charset='utf-8')
+											p Quelle est votre code postal?
+											p
+												input#subscribe-field(type='text', name='email', style='width: 95%; padding: 1px ' +
+												'2px', placeholder='7500, Tournai', value='')
+											p.text-center
+												a(href="#").create-btn__next-step.btn-success Suivant
 
 
 
