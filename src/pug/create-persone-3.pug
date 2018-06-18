@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.panel-list
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row
+								.col-xs-12
+									.progress-block
+										.progress-circle.progress-80
+											span 85
+							.row.mx-0.mb-20
+								.col-xs-12.px-1
+									.panel.panel-pink.pt-4
+										.panel-header
+											h3.text-center Quelle est votre code postal?
+										.panel-body
+											img.mb-3(src='assets/img/global/zipcode.png', alt='#')
+											.row.py-3
+												.col-sm-6.col-sm-offset-3
+													input(type="text", placeholder="7500, Tournai", name="zipcode",
+													value="",required).welcome-modal--input
+
+							.row
+								.text-center
+									a(href="#").create-btn__next-step Suivant
+
+
+
+
+	script(src="assets/js/multi-step-modal.js")
+	script.
+		sendEvent = function (sel, step) {
+			$(sel).trigger('next.m.' + step);
+		}
+
+
+
+

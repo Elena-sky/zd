@@ -1,5 +1,5 @@
 $color-progress-circle-number: #fff;
-$color-progress-circle: #A81346;
+$color-progress-circle: $danger;
 $color-progress-idicator: #FDB32A;
 $color-progress-number: #000;
 .progress-block{
@@ -12,8 +12,8 @@ $color-progress-number: #000;
   position: relative;
   display: inline-block;
   margin: 1rem;
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: $color-progress-circle;
   &.size-90{  zoom: 0.9;  }

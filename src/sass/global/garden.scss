@@ -11,23 +11,32 @@
 		height: 100%;
 	}
 	&-inner{
-		display: flex;
-		flex-direction:row;
-		justify-content: space-between;
-		align-items: center;
-		width: 50%;
-		height: 60%;
+		display: block;
+		width: 100%;
+		height: 100%;
 		position: absolute;
-		left: 25%;
-		top: 20%;
-		@media (max-width: $screen-sm-max) {
-			width: 80%;
+		&-button-group{
+			display: block;
+			position: relative;
+			width: 100%;
 			height: 100%;
-			left: 10%;
-			top: 0;
+			overflow: hidden;
+			padding: 5%;
 		}
 	}
 	&-btn{
+		position: absolute;
+		&-left{
+			display: block;
+			left: 5.5%;
+			top: 71%;
+			transform: rotate(-12deg);
+		}
+		&-right{
+			right: 3.7%;
+			top: 56%;
+			transform: rotate(12deg);
+		}
 
 		.fa{
 			left: 0;
