@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.impact-human
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row.mx-0.mb-20
+								.col-sm-12
+									.col-xs-12
+										.bubble.bubble-success.bounceInDown.animated.mb-6
+											h3 Pourquoi reduire ses dechets?
+											.video-block
+												iframe(type='text/html' width='640' height='480'
+												src='http://www.youtube.com/embed/D6GlJcKdwHA'
+												frameborder='0')
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man-02.png")
+								.col-xs-8
+									.pull-right
+										a.btn-success.btn3d(href="#")
+											i.fa.fa-check-circle
+											span Skip this video
+							.row
+								.text-center
+									a(href="#").create-btn__next-step Suivant
+
+
+
+
+	script(src="assets/js/multi-step-modal.js")
+	script.
+		sendEvent = function (sel, step) {
+			$(sel).trigger('next.m.' + step);
+		}
+
+
+
+

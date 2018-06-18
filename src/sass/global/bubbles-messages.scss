@@ -1,0 +1,45 @@
+$bubble-success-color : #d5e8b6;
+
+.bubble{
+	display: block;
+	width: 100%;
+	min-height: 200px;
+	background-color: #C8EBF1;
+	box-shadow: inset 0 0 40px 20px rgba(255,255,255,0.5);
+	border-radius: 15px;
+	text-align: left;
+	padding: 1rem;
+	position: relative;
+	transition: all 2s ease-in-out;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 20%;
+		bottom: -60px;
+		width: 0;
+		height: 0;
+		border: 60px solid transparent;
+		border-right-color: rgba(200,235,241,0.5);
+		box-shadow: inset 0 0 40px 20px rgba(255,255,255,0.5);
+		border-left: 0;
+		border-bottom: 0;
+		margin-top: -30px;
+		margin-left: -60px;
+	}
+	&.bubble-success{
+		background-color: $bubble-success-color ;
+		&:after{
+			border-top-color: rgba($bubble-success-color, .5);
+			border-right-color: transparent;
+		}
+	}
+	.video-block{
+		width: 100%;
+		height: 100%;
+		display: block;
+		iframe{
+			width: 100%;
+			min-height: 400px;
+		}
+	}
+}
