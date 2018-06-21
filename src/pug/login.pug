@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.impact-human
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row.mb-20
+								.col-xs-12
+									.bubble.bubble-info.bubble-right.bounceInDown.animated.mb-6
+										.row
+											.col-xs-6.px-5
+												h1.mb-3 Create an account
+												p Creating an account enables super magical features
+												.panel.py-6
+													p.text-center.py-6
+
+														a.btn.btn-social.btn-facebook.text-center
+															i.fa.fa-facebook-square
+															span Sign Up via Facebook
+											.vertical-line-box
+												.vertical-line
+													span OR
+											.col-xs-6.px-5
+												.mb-2.py-5
+												p.mb-20 Via your email
+												form.py-5
+													.form-group
+														input(type="text", placeholder="First name",
+														name="", value="",required).welcome-modal--input.mb-20
+													.form-group
+														input(type="email", placeholder="E-mail",
+														name="", value="",required).welcome-modal--input.mb-20
+													.form-group
+														input(type="password", placeholder="Password",
+														name="", value="",required).welcome-modal--input.mb-20
+													.text-center
+														a(href="#").create-btn__next-step.btn-success Create my account
+							.row
+
+								.col-xs-8
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man-02.png")
+
+
+
+
+	script(src="assets/js/multi-step-modal.js")
+	script.
+		sendEvent = function (sel, step) {
+			$(sel).trigger('next.m.' + step);
+		}
+
+
+
+

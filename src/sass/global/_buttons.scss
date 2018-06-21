@@ -24,6 +24,32 @@
 	&-default {
 		color: inherit;
 	}
+	&-social{
+		//display: block;
+		border-radius: 4px;
+		.fa{
+			font-size: inherit;
+			display: inline-block;
+			float: left;
+			vertical-align: middle;
+			margin-right: 10px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+		span{
+			display: inline-block;
+			float: left;
+			vertical-align: middle;
+		}
+	}
+	&-facebook{
+		background: $facebook-color;
+		color: $white;
+		&:hover,
+		&:focus{
+			background: darken($facebook-color , 5%);
+		}
+	}
 	&-custom{
 		border-radius: 25px;
 		min-width: 160px;

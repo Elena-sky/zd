@@ -1,5 +1,9 @@
 $bubble-success-color : #d5e8b6;
 $bubble-primary-color : $primary;
+$bubble-pink-color : $pink;
+$bubble-danger-color : $danger;
+$bubble-info-color : $info;
+$bubble-warning-color : $warning;
 
 .bubble{
 	display: block;
@@ -27,11 +31,79 @@ $bubble-primary-color : $primary;
 		margin-top: -30px;
 		margin-left: -60px;
 	}
+	.panel{
+		background: transparent !important;
+		box-shadow: none;
+		margin-bottom: 0;
+	}
+	&.bubble-right:after{
+		left: auto;
+		right: 15%;
+	}
 	&.bubble-success{
 		background-color: $bubble-success-color ;
 		&:after{
 			border-top-color: rgba($bubble-success-color, .5);
 			border-right-color: transparent;
+		}
+		.bubble-right:after{
+			border-top-color:transparent;
+			border-right-color: rgba( $bubble-success-color, .5) ;
+		}
+	}
+	&.bubble-primary{
+		background-color: $bubble-primary-color ;
+		&:after{
+			border-top-color: rgba($bubble-primary-color, .5);
+			border-right-color: transparent;
+		}
+		.bubble-right:after{
+			border-top-color:transparent;
+			border-right-color: rgba( $bubble-primary-color, .28) ;
+		}
+	}
+	&.bubble-info{
+		background-color: rgba($bubble-info-color, .5);
+		&:after{
+			border-top-color: rgba($bubble-info-color, .28);
+			border-right-color: transparent;
+		}
+		.bubble-right:after{
+			border-top-color:transparent;
+			border-right-color: rgba( $bubble-info-color, .28) ;
+		}
+	}
+	&.bubble-danger{
+		background-color: $bubble-danger-color ;
+		&:after{
+			border-top-color: rgba($bubble-danger-color, .28);
+			border-right-color: transparent;
+		}
+		.bubble-right:after{
+			border-top-color:transparent;
+			border-right-color: rgba( $bubble-danger-color, .28) ;
+		}
+	}
+	&.bubble-pink{
+		background-color: $bubble-pink-color ;
+		&:after{
+			border-top-color: rgba($bubble-pink-color, .5);
+			border-right-color: transparent;
+		}
+		.bubble-right:after{
+			border-top-color:transparent;
+			border-right-color: rgba( $bubble-pink-color, .28) ;
+		}
+	}
+	&.bubble-warning{
+		background-color: $bubble-warning-color ;
+		&:after{
+			border-top-color: rgba($bubble-warning-color, .5);
+			border-right-color: transparent;
+		}
+		.bubble-right:after{
+			border-top-color:transparent;
+			border-right-color: rgba( $bubble-warning-color, .28) ;
 		}
 	}
 	.video-block{
