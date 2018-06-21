@@ -3,7 +3,7 @@
 #### Need to be installed
 * node.js You'll need to install [Node.js](https://nodejs.org/en/), you can use the `v6.11.0` or above. Then open up a console (Terminal, iTerm, PowerShell, etc.) and install the depencencies for this project.
 * npm 5
-* gulp-cli 
+* gulp-cli
 
 #### steps to install
 1. clone this repo
