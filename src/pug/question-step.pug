@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.panel-list
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row
+								.col-xs-12
+									.progress-block
+										.progress-circle.progress-30
+											span 30
+							.row.mx-0.mb-20
+								.col-xs-12.px-1
+									.panel.panel-pink.pt-4
+										.panel-header
+											h2.text-center Some text with question?
+										.row.p-3
+											.col-xs-8
+												img.img-responsive.img-rounded.mx-auto(src='assets/img/global/save-planet.jpg',
+alt='#')
+											.col-xs-4
+												.btn-vertical-group.py-6
+													a.btn.btn-success.btn-rounded(href="#")
+														.fa.fa-check
+													p Je ne fais pas encore
+													a.btn.btn-danger.btn-rounded(href="#")
+														.fa.fa-times
+													p Je fais déjà
+
+		// Login modal
+		form#loginModal.modal.multi-step
+			.container
+				.modal-dialog
+					// Modal content
+					.modal-content
+						.modal-header.pb-0
+							button.close(type='button' data-dismiss='modal') &times;
+						.modal-body
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man.png")
+								.col-xs-8.pr-5
+									.welcome-modal.step.step-1.bounceInDown(data-step='1')
+										h3.welcome-modal--title Welcome & Congrats
+										p.welcome-modal--text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+									.welcome-modal.step.step-2.bounceInDown(data-step='2')
+										p.welcome-modal--text Nice to meet you! My name is SMOGEY, and I’m really happy that you’re here.
+										p.welcome-modal--text During the following months I’ll be here to help you in the waste reducing.
+										p.welcome-modal--text.text-bold What’s your name my friend?
+										input#welcome-user-name(type="text", placeholder="Name", name="welcome-user--name", value="",required).welcome-modal--input
+									.welcome-modal.step.step-3.bounceInDown(data-step='3')
+										h3.welcome-modal--title 3
+										p.welcome-modal--text 3 text
+								.col-xs-12
+									button(type='button', data-step="1", onclick="sendEvent('#loginModal', 2)").welcome-modal--next.step.step-1
+										i.fa.fa-arrow-right
+									button(type='button', data-step="2", onclick="sendEvent('#loginModal', 3)").welcome-modal--next.step.step-2
+										i.fa.fa-arrow-right
+									button(type='button', data-step="3", onclick="sendEvent('#loginModal', 4)").welcome-modal--next.step.step-3
+										i.fa.fa-arrow-right
+
+	script(src="assets/js/multi-step-modal.js")
+	script.
+		sendEvent = function (sel, step) {
+			$(sel).trigger('next.m.' + step);
+		}
+
+
+
+

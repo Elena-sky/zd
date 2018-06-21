@@ -36,6 +36,12 @@
 			margin: 0 auto;
 		}
 	}
+	&-icon{
+		position: absolute;
+		top: 0;
+		&.left{  left: 15px;  }
+		&.right{  right: 15px;  }
+	}
 	&-header,
 	&-body,
 	&-footer{
@@ -69,5 +75,10 @@
 	}
 	&-warning{
 		@include bottom-border ($warning);
+	}
+}
+.oneHeight{
+	.panel{
+		height: 100%;
 	}
 }
