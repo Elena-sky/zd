@@ -2,7 +2,7 @@
 html(lang="en")
 	include global/head
 	+head(
-		'ZD'
+		'login'
 	)
 	include mixin/all-mixin
 	body.homepage
@@ -56,23 +56,9 @@ html(lang="en")
 														input(type="password", placeholder="Password",
 														name="", value="",required).welcome-modal--input.mb-20
 													.text-center
-														a(href="#").create-btn__next-step.btn-success Create my account
+														a(href="#").create-btn__next-step.btn-warning Create my account
 							.row
-
 								.col-xs-8
 								.col-xs-4
 									.d-block
 										img.img-responsive(src="assets/img/global/man-02.png")
-
-
-
-
-	script(src="assets/js/multi-step-modal.js")
-	script.
-		sendEvent = function (sel, step) {
-			$(sel).trigger('next.m.' + step);
-		}
-
-
-
-
