@@ -30,11 +30,11 @@ html(lang="en")
 								.row
 									.col-md-3.col-sm-12.mt-3
 										.d-block
-											a.btn-primary.btn3d(href="#", data-toggle="modal", data-target="#loginModal")
+											a.btn-primary.btn3d(href="#", data-toggle="modal", data-target="#signUpModal")
 												span Sign Up
 												i.fa.fa-chevron-right
 										.d-block
-											a.btn-success.btn3d.mb-0(href="#")
+											a.btn-success.btn3d.mb-0(href="#", data-toggle="modal", data-target="#loginModal")
 												span Login
 												i.fa.fa-chevron-right
 									.col-md-9.col-sm-12.py-3
@@ -71,8 +71,36 @@ html(lang="en")
 										.panel-body
 											img(src='assets/img/global/progress.gif', alt='#')
 
-		// Login modal
-		form#loginModal.modal.multi-step
+
+
+		//Login modal
+		#loginModal.modal.multi-step
+			.container
+				.modal-dialog
+					// Modal content
+					.modal-content
+						.modal-header.pb-0
+							button.close(type='button' data-dismiss='modal') &times;
+						.modal-body
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man.png")
+								.col-xs-8.pr-5
+									h2.mb-20 Connetction
+									form.w-100
+										.form-group.mb-3
+											input(type="email", placeholder="E-mail",
+											name="", value="",required).welcome-modal--input.mb-20
+										.form-group.mb-3
+											input(type="password", placeholder="Password",
+											name="", value="",required).welcome-modal--input.mb-20
+										.form-group.mb-3
+											a(href="#").create-btn__next-step.btn-success Login
+
+
+		// Sign Up modal
+		form#signUpModal.modal.multi-step
 			.container
 				.modal-dialog
 					// Modal content
@@ -97,12 +125,14 @@ html(lang="en")
 										h3.welcome-modal--title 3
 										p.welcome-modal--text 3 text
 								.col-xs-12
-									button(type='button', data-step="1", onclick="sendEvent('#loginModal', 2)").welcome-modal--next.step.step-1
+									button(type='button', data-step="1", onclick="sendEvent('#signUpModal', 2)").welcome-modal--next.step.step-1
 										i.fa.fa-arrow-right
-									button(type='button', data-step="2", onclick="sendEvent('#loginModal', 3)").welcome-modal--next.step.step-2
+									button(type='button', data-step="2", onclick="sendEvent('#signUpModal', 3)").welcome-modal--next.step.step-2
 										i.fa.fa-arrow-right
-									button(type='button', data-step="3", onclick="sendEvent('#loginModal', 4)").welcome-modal--next.step.step-3
+									button(type='button', data-step="3", onclick="sendEvent('#signUpModal', 4)").welcome-modal--next.step.step-3
 										i.fa.fa-arrow-right
+
+
 
 	script(src="assets/js/multi-step-modal.js")
 	script.
