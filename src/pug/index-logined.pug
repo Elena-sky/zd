@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.panel-list
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left L'outil presque ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.jumbotron.px-3.py-0
+								.row
+									.col-md-3.col-sm-12.mt-3
+										.d-block
+											a.btn-primary.btn3d(href="#", data-toggle="modal", data-target="#signUpModal")
+												span Sign Up
+												i.fa.fa-chevron-right
+										.d-block
+											a.btn-success.btn3d.mb-0(href="#", data-toggle="modal", data-target="#loginModal")
+												span Login
+												i.fa.fa-chevron-right
+									.col-md-9.col-sm-12.py-3
+										p.text-left.mb-0 L’outil ZD va vous aider dans la démarche de réduction de vos déchets. En effet,
+											| nous
+											| sommes de plus en plus à être conscient de l’impact de l’homme sur la planète...Il faut
+											| d’ailleur savoir que xxxxx tonnes de déchets se retrouve chaque année dans les océans…
+							.row.mx-0.mb-20
+								.col-xs-12
+									.panel.panel-warning.pt-4
+										.panel-body
+											.row
+												.col-xs-8
+													.text-center.py-6
+														h1.text-bold.text-uppercase Introduisez vos données
+												.col-xs-4
+													img.img-responsive(src='assets/img/global/introduce-data.gif', alt='#')
+
+								.col-sm-6.col-xs-12
+									.panel.panel-pink.pt-4
+										.panel-header
+											.text-center.py-4
+												h1.text-bold.text-uppercase Suivez votre évolution
+										.panel-body
+											.row
+												.col-xs-8
+												.col-xs-4
+													img.img-responsive(src='assets/img/global/follow.gif', alt='#')
+
+
+								.col-sm-6.col-xs-12
+									.row
+										.col-xs-12
+											.input-group.py-5.mb-5
+												input.form-control(type='text', placeholder='Chercher une information, un conseil, …')
+												span.input-group-btn
+													button.btn.btn-default(type='button')
+														i.fa.fa-search
+									.row
+										.col-xs-6
+											.fun-fact
+												.fun-fact-img
+													img(src="assets/img/global/trash-basket.png")
+												.fun-fact-label.bg-warning
+													span + 12 %
+										.col-xs-6
+											.fun-fact
+												.fun-fact-img
+													img(src="assets/img/global/weigher.png")
+												.fun-fact-label.bg-success
+													span - 9 kg
+
+
+
+								.col-xs-12
+									.panel.panel-warning.pt-4
+										.panel-header
+											h3.text-center Réduisez vos dechets
+										.panel-body
+											img(src='assets/img/global/progress.gif', alt='#')
+
+
+
+		//Login modal
+		#loginModal.modal.multi-step
+			.container
+				.modal-dialog
+					// Modal content
+					.modal-content
+						.modal-header.pb-0
+							button.close(type='button' data-dismiss='modal') &times;
+						.modal-body
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man.png")
+								.col-xs-8.pr-5
+									h2.mb-20 Connetction
+									form.w-100
+										.form-group.mb-3
+											input(type="email", placeholder="E-mail",
+											name="", value="",required).welcome-modal--input.mb-20
+										.form-group.mb-3
+											input(type="password", placeholder="Password",
+											name="", value="",required).welcome-modal--input.mb-20
+										.form-group.mb-3
+											a(href="#").create-btn__next-step.btn-success Login
+
+
+		// Sign Up modal
+		form#signUpModal.modal.multi-step
+			.container
+				.modal-dialog
+					// Modal content
+					.modal-content
+						.modal-header.pb-0
+							button.close(type='button' data-dismiss='modal') &times;
+						.modal-body
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man.png")
+								.col-xs-8.pr-5
+									.welcome-modal.step.step-1.bounceInDown(data-step='1')
+										h3.welcome-modal--title Welcome & Congrats
+										p.welcome-modal--text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+									.welcome-modal.step.step-2.bounceInDown(data-step='2')
+										p.welcome-modal--text Nice to meet you! My name is SMOGEY, and I’m really happy that you’re here.
+										p.welcome-modal--text During the following months I’ll be here to help you in the waste reducing.
+										p.welcome-modal--text.text-bold What’s your name my friend?
+										input#welcome-user-name(type="text", placeholder="Name", name="welcome-user--name", value="",required).welcome-modal--input
+									.welcome-modal.step.step-3.bounceInDown(data-step='3')
+										h3.welcome-modal--title 3
+										p.welcome-modal--text 3 text
+								.col-xs-12
+									button(type='button', data-step="1", onclick="sendEvent('#signUpModal', 2)").welcome-modal--next.step.step-1
+										i.fa.fa-arrow-right
+									button(type='button', data-step="2", onclick="sendEvent('#signUpModal', 3)").welcome-modal--next.step.step-2
+										i.fa.fa-arrow-right
+									button(type='button', data-step="3", onclick="sendEvent('#signUpModal', 4)").welcome-modal--next.step.step-3
+										i.fa.fa-arrow-right
+
+
+
+	script(src="assets/js/multi-step-modal.js")
+	script.
+		sendEvent = function (sel, step) {
+			$(sel).trigger('next.m.' + step);
+		}
+
+
+
+
