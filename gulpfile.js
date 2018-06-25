@@ -168,6 +168,6 @@ exports.server = server;
 gulp.task('default', gulp.series(
     clean,
     // gulp.parallel(SVGSpriteBuild, fonts, styles, scripts, templates, images),
-    gulp.parallel( fonts, styles, scripts,vendorScripts, templates, images),
+    gulp.parallel( fonts, styles, scripts, vendorScripts, templates, images),
     gulp.parallel(watch, server)
 ));
