@@ -1,0 +1,21 @@
+.my-account{
+	.nav.nav-tabs{
+		border-bottom: transparent;
+		.my-account-link{
+			color: $black;
+			border-radius: 0;
+			text-transform: uppercase;
+			border: 2px solid $border-color;
+			font-weight: bold;
+			.fa{
+				margin-left: 2rem;
+			}
+		}
+		li.active{
+			.my-account-link {
+				background: $border-color;
+			}
+		}
+	}
+
+}
