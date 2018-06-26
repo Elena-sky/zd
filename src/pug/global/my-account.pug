@@ -18,8 +18,41 @@
         .col-xs-12
             #myAccountContent.tab-content
                 #family.tab-pane.panel.panel-warning.p-4.fade.in.active
-                    p
-                        | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                    ul.users-list.clearfix
+                        li.user-list__item
+                            .user-list__item-img
+                                img(src="assets/img/global/father.svg")
+                            .user-list__item-name Martin Davos
+                            .user-list__item-type
+                                select.selectpicker.show-tick(data-width="fit", data-style="btn-outline-success-transparent")
+                                    option father
+                                    option mother
+                                    option douther
+                                    option son
+                        li.user-list__item
+                            .user-list__item-img
+                                img(src="assets/img/global/mother.svg")
+                            .user-list__item-name Jeanne Davos
+                            .user-list__item-type
+                                select.selectpicker.show-tick(data-width="fit", data-style="btn-outline-success-transparent")
+                                    option mother
+                                    option father
+                                    option douther
+                                    option son
+                        li.user-list__item
+                            .user-list__item-img
+                                img(src="assets/img/global/son.svg")
+                            .user-list__item-name Alfred Davos
+                            .user-list__item-type
+                                select.selectpicker.show-tick(data-width="fit", data-style="btn-outline-success-transparent")
+                                    option son
+                                    option father
+                                    option mother
+                                    option douther
+
+
+
+
                 #trophies.tab-pane.panel.panel-pink.p-4.fade
                     p
                         | Light Blue - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:

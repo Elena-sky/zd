@@ -115,6 +115,12 @@
 	color: $success;
 	background-color: $white;
 }
+.btn-outline-success-transparent {
+	color: $success !important;
+	background-color: transparent;
+	border: 0;
+}
+
 
 .btn-outline-warning {
 	color: $warning;
