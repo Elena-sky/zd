@@ -1,0 +1,47 @@
+form.settings-form
+    .row
+        .col-md-2
+            .form-group.mb-3
+                label E-mail:
+        .col-md-4
+            .form-group.mb-3
+                input(type="email", placeholder="E-mail",
+                name="", value="",required).welcome-modal--input.mb-20
+    .row
+        .col-md-2
+            .form-group.mb-3
+                label Password:
+        .col-md-4
+            .form-group.mb-3
+                input(type="password", placeholder="Password",
+                name="", value="",required).welcome-modal--input.mb-20
+    .row
+        .col-md-2
+            .form-group.mb-3
+                label City:
+        .col-md-4
+            .form-group.mb-3
+                input(type="text", placeholder="7000; Tournai",
+                name="", value="",required).welcome-modal--input.mb-20
+    .row
+        .col-md-2
+            .form-group.mb-3
+                label Language
+        .col-md-4
+            .form-group.mb-3
+                select.selectpicker.form-control.select-lang
+                    include lang-list
+    .row
+        .col-md-2
+            .form-group.mb-3
+                label Newsletter
+        .col-md-2
+            .form-group.mb-3
+                .radio
+                    label.d-inline-block Yes
+                        input(type="radio" name="newsletter-yes-no")
+
+    .row
+        .col-md-1
+            .form-group.mb-3
+                a(href="#").create-btn__next-step.btn-success Save

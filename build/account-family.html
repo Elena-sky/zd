@@ -21,8 +21,6 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <!--<![endif]-->
     </head>
-  <!--card-text-->
-  <!--calendar-tooltip-->
   <body class="homepage">
     <div class="wrapper">
       <section class="main">
@@ -58,16 +56,16 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <ul class="nav nav-tabs" id="myAccount" style="margin-bottom: 15px;">
-                      <li class="active"><a class="my-account-link" href="#family" data-toggle="tab">My family<i class="fa fa-users"></i></a></li>
+                      <li><a class="my-account-link" href="#family" data-toggle="tab">My family<i class="fa fa-users"></i></a></li>
                       <li><a class="my-account-link" href="#trophies" data-toggle="tab">My trophies<i class="fa fa-trophy"></i></a></li>
-                      <li><a class="my-account-link" href="#settings" data-toggle="tab">Settings<i class="fa fa fa-cogs"></i></a></li>
+                      <li class="active"><a class="my-account-link" href="#settings" data-toggle="tab">Settings<i class="fa fa fa-cogs"></i></a></li>
                     </ul>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12">
                     <div class="tab-content" id="myAccountContent">
-                      <div class="tab-pane panel panel-warning p-4 fade in active" id="family">
+                      <div class="tab-pane panel panel-warning p-4 fade" id="family">
                         <ul class="users-list clearfix">
                           <li class="user-list__item">
                             <div class="user-list__item-img"><img src="assets/img/global/father.svg"/></div>
@@ -105,17 +103,343 @@
                               </select>
                             </div>
                           </li>
+                          <li class="user-list__item">
+                            <button class="create-member" id="createMember"><i class="fa fa-plus"></i><span>Add member</span></button>
+                          </li>
                         </ul>
                       </div>
                       <div class="tab-pane panel panel-pink p-4 fade" id="trophies">
-                        <p>
-                          Light Blue - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
-                          We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
-                          We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
-                        </p>
+                        <ul class="trophies-list clearfix">
+                          <li class="trophies-list-item active"><a class="trophies-link"><img src="assets/img/trophies/trophies-01.svg"/></a></li>
+                          <li class="trophies-list-item active"><a class="trophies-link"><img src="assets/img/trophies/trophies-02.svg"/></a></li>
+                          <li class="trophies-list-item active"><a class="trophies-link"><img src="assets/img/trophies/trophies-03.svg"/></a></li>
+                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-04.svg"/></a></li>
+                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-05.svg"/></a></li>
+                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-06.svg"/></a></li>
+                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-07.svg"/></a></li>
+                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-08.svg"/></a></li>
+                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-09.svg"/></a></li>
+                        </ul>
                       </div>
-                      <div class="tab-pane panel panel-success p-4 fade" id="settings">
-                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                      <div class="tab-pane panel panel-success p-4 fade in active" id="settings">
+                        <form class="settings-form">
+                          <div class="row">
+                            <div class="col-md-2">
+                              <div class="form-group mb-3">
+                                <label>E-mail:</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group mb-3">
+                                <input class="welcome-modal--input mb-20" type="email" placeholder="E-mail" name="" value="" required="required"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <div class="form-group mb-3">
+                                <label>Password:</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group mb-3">
+                                <input class="welcome-modal--input mb-20" type="password" placeholder="Password" name="" value="" required="required"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <div class="form-group mb-3">
+                                <label>City:</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group mb-3">
+                                <input class="welcome-modal--input mb-20" type="text" placeholder="7000; Tournai" name="" value="" required="required"/>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <div class="form-group mb-3">
+                                <label>Language</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-group mb-3">
+                                <select class="selectpicker form-control select-lang">
+                                  <option data-content="&lt;span class=&quot;flag-icon flag-icon-gb rounded&quot;&gt;&lt;/span&gt; English">English</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-af rounded'&gt;&lt;/span&gt; Afghanistan">Afghanistan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ax rounded'&gt;&lt;/span&gt; Aland Islands">Aland Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-al rounded'&gt;&lt;/span&gt; Albania">Albania</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-dz rounded'&gt;&lt;/span&gt; Algeria">Algeria</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-as rounded'&gt;&lt;/span&gt; American Samoa">American Samoa</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ad rounded'&gt;&lt;/span&gt; Andorra">Andorra</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ao rounded'&gt;&lt;/span&gt; Angola">Angola</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ai rounded'&gt;&lt;/span&gt; Anguilla">Anguilla</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-aq rounded'&gt;&lt;/span&gt; Antarctica">Antarctica</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ag rounded'&gt;&lt;/span&gt; Antigua And Barbuda">Antigua And Barbuda</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ar rounded'&gt;&lt;/span&gt; Argentina">Argentina</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-am rounded'&gt;&lt;/span&gt; Armenia">Armenia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-aw rounded'&gt;&lt;/span&gt; Aruba">Aruba</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-au rounded'&gt;&lt;/span&gt; Australia">Australia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-at rounded'&gt;&lt;/span&gt; Austria">Austria</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-az rounded'&gt;&lt;/span&gt; Azerbaijan">Azerbaijan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bs rounded'&gt;&lt;/span&gt; Bahamas">Bahamas</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bh rounded'&gt;&lt;/span&gt; Bahrain">Bahrain</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bd rounded'&gt;&lt;/span&gt; Bangladesh">Bangladesh</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bb rounded'&gt;&lt;/span&gt; Barbados">Barbados</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-by rounded'&gt;&lt;/span&gt; Belarus">Belarus</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-be rounded'&gt;&lt;/span&gt; Belgium">Belgium</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bz rounded'&gt;&lt;/span&gt; Belize">Belize</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bj rounded'&gt;&lt;/span&gt; Benin">Benin</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bm rounded'&gt;&lt;/span&gt; Bermuda">Bermuda</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bt rounded'&gt;&lt;/span&gt; Bhutan">Bhutan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bo rounded'&gt;&lt;/span&gt; Bolivia">Bolivia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ba rounded'&gt;&lt;/span&gt; Bosnia And Herzegovina">Bosnia And Herzegovina</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bw rounded'&gt;&lt;/span&gt; Botswana">Botswana</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bv rounded'&gt;&lt;/span&gt; Bouvet Island">Bouvet Island</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-br rounded'&gt;&lt;/span&gt; Brazil">Brazil</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-io rounded'&gt;&lt;/span&gt; British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bn rounded'&gt;&lt;/span&gt; Brunei Darussalam">Brunei Darussalam</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bg rounded'&gt;&lt;/span&gt; Bulgaria">Bulgaria</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bf rounded'&gt;&lt;/span&gt; Burkina Faso">Burkina Faso</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bi rounded'&gt;&lt;/span&gt; Burundi">Burundi</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-kh rounded'&gt;&lt;/span&gt; Cambodia">Cambodia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cm rounded'&gt;&lt;/span&gt; Cameroon">Cameroon</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ca rounded'&gt;&lt;/span&gt; Canada">Canada</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cv rounded'&gt;&lt;/span&gt; Cape Verde">Cape Verde</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ky rounded'&gt;&lt;/span&gt; Cayman Islands">Cayman Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cf rounded'&gt;&lt;/span&gt; Central African Republic">Central African Republic</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-td rounded'&gt;&lt;/span&gt; Chad">Chad</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cl rounded'&gt;&lt;/span&gt; Chile">Chile</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cn rounded'&gt;&lt;/span&gt; China">China</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cx rounded'&gt;&lt;/span&gt; Christmas Island">Christmas Island</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cc rounded'&gt;&lt;/span&gt; Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-co rounded'&gt;&lt;/span&gt; Colombia">Colombia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-km rounded'&gt;&lt;/span&gt; Comoros">Comoros</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cg rounded'&gt;&lt;/span&gt; Congo">Congo</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cd rounded'&gt;&lt;/span&gt; Congo Democratic Republic">Congo Democratic Republic</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ck rounded'&gt;&lt;/span&gt; Cook Islands">Cook Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cr rounded'&gt;&lt;/span&gt; Costa Rica">Costa Rica</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ci rounded'&gt;&lt;/span&gt; Cote D'Ivoire">Cote D'Ivoire</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-hr rounded'&gt;&lt;/span&gt; Croatia">Croatia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cu rounded'&gt;&lt;/span&gt; Cuba">Cuba</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cy rounded'&gt;&lt;/span&gt; Cyprus">Cyprus</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-cz rounded'&gt;&lt;/span&gt; Czech Republic">Czech Republic</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-dk rounded'&gt;&lt;/span&gt; Denmark">Denmark</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-dj rounded'&gt;&lt;/span&gt; Djibouti">Djibouti</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-dm rounded'&gt;&lt;/span&gt; Dominica">Dominica</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-do rounded'&gt;&lt;/span&gt; Dominican Republic">Dominican Republic</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ec rounded'&gt;&lt;/span&gt; Ecuador">Ecuador</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-eg rounded'&gt;&lt;/span&gt; Egypt">Egypt</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sv rounded'&gt;&lt;/span&gt; El Salvador">El Salvador</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gq rounded'&gt;&lt;/span&gt; Equatorial Guinea">Equatorial Guinea</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-er rounded'&gt;&lt;/span&gt; Eritrea">Eritrea</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ee rounded'&gt;&lt;/span&gt; Estonia">Estonia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-et rounded'&gt;&lt;/span&gt; Ethiopia">Ethiopia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-fk rounded'&gt;&lt;/span&gt; Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-fo rounded'&gt;&lt;/span&gt; Faroe Islands">Faroe Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-fj rounded'&gt;&lt;/span&gt; Fiji">Fiji</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-fi rounded'&gt;&lt;/span&gt; Finland">Finland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-fr rounded'&gt;&lt;/span&gt; France">France</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gf rounded'&gt;&lt;/span&gt; French Guiana">French Guiana</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pf rounded'&gt;&lt;/span&gt; French Polynesia">French Polynesia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tf rounded'&gt;&lt;/span&gt; French Southern Territories">French Southern Territories</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ga rounded'&gt;&lt;/span&gt; Gabon">Gabon</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gm rounded'&gt;&lt;/span&gt; Gambia">Gambia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ge rounded'&gt;&lt;/span&gt; Georgia">Georgia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-de rounded'&gt;&lt;/span&gt; Germany">Germany</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gh rounded'&gt;&lt;/span&gt; Ghana">Ghana</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gi rounded'&gt;&lt;/span&gt; Gibraltar">Gibraltar</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gr rounded'&gt;&lt;/span&gt; Greece">Greece</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gl rounded'&gt;&lt;/span&gt; Greenland">Greenland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gd rounded'&gt;&lt;/span&gt; Grenada">Grenada</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gp rounded'&gt;&lt;/span&gt; Guadeloupe">Guadeloupe</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gu rounded'&gt;&lt;/span&gt; Guam">Guam</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gt rounded'&gt;&lt;/span&gt; Guatemala">Guatemala</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gg rounded'&gt;&lt;/span&gt; Guernsey">Guernsey</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gn rounded'&gt;&lt;/span&gt; Guinea">Guinea</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gw rounded'&gt;&lt;/span&gt; Guinea-Bissau">Guinea-Bissau</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gy rounded'&gt;&lt;/span&gt; Guyana">Guyana</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ht rounded'&gt;&lt;/span&gt; Haiti">Haiti</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-hm rounded'&gt;&lt;/span&gt; Heard Island &amp; Mcdonald Islands">Heard Island & Mcdonald Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-va rounded'&gt;&lt;/span&gt; Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-hn rounded'&gt;&lt;/span&gt; Honduras">Honduras</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-hk rounded'&gt;&lt;/span&gt; Hong Kong">Hong Kong</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-hu rounded'&gt;&lt;/span&gt; Hungary">Hungary</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-is rounded'&gt;&lt;/span&gt; Iceland">Iceland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-in rounded'&gt;&lt;/span&gt; India">India</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-id rounded'&gt;&lt;/span&gt; Indonesia">Indonesia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ir rounded'&gt;&lt;/span&gt; Iran Islamic Republic Of">Iran Islamic Republic Of</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-iq rounded'&gt;&lt;/span&gt; Iraq">Iraq</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ie rounded'&gt;&lt;/span&gt; Ireland">Ireland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-im rounded'&gt;&lt;/span&gt; Isle Of Man">Isle Of Man</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-il rounded'&gt;&lt;/span&gt; Israel">Israel</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-it rounded'&gt;&lt;/span&gt; Italy">Italy</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-jm rounded'&gt;&lt;/span&gt; Jamaica">Jamaica</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-jp rounded'&gt;&lt;/span&gt; Japan">Japan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-je rounded'&gt;&lt;/span&gt; Jersey">Jersey</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-jo rounded'&gt;&lt;/span&gt; Jordan">Jordan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-kz rounded'&gt;&lt;/span&gt; Kazakhstan">Kazakhstan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ke rounded'&gt;&lt;/span&gt; Kenya">Kenya</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ki rounded'&gt;&lt;/span&gt; Kiribati">Kiribati</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-kr rounded'&gt;&lt;/span&gt; Korea">Korea</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-kw rounded'&gt;&lt;/span&gt; Kuwait">Kuwait</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-kg rounded'&gt;&lt;/span&gt; Kyrgyzstan">Kyrgyzstan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-la rounded'&gt;&lt;/span&gt; Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lv rounded'&gt;&lt;/span&gt; Latvia">Latvia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lb rounded'&gt;&lt;/span&gt; Lebanon">Lebanon</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ls rounded'&gt;&lt;/span&gt; Lesotho">Lesotho</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lr rounded'&gt;&lt;/span&gt; Liberia">Liberia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ly rounded'&gt;&lt;/span&gt; Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-li rounded'&gt;&lt;/span&gt; Liechtenstein">Liechtenstein</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lt rounded'&gt;&lt;/span&gt; Lithuania">Lithuania</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lu rounded'&gt;&lt;/span&gt; Luxembourg">Luxembourg</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mo rounded'&gt;&lt;/span&gt; Macao">Macao</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mk rounded'&gt;&lt;/span&gt; Macedonia">Macedonia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mg rounded'&gt;&lt;/span&gt; Madagascar">Madagascar</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mw rounded'&gt;&lt;/span&gt; Malawi">Malawi</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-my rounded'&gt;&lt;/span&gt; Malaysia">Malaysia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mv rounded'&gt;&lt;/span&gt; Maldives">Maldives</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ml rounded'&gt;&lt;/span&gt; Mali">Mali</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mt rounded'&gt;&lt;/span&gt; Malta">Malta</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mh rounded'&gt;&lt;/span&gt; Marshall Islands">Marshall Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mq rounded'&gt;&lt;/span&gt; Martinique">Martinique</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mr rounded'&gt;&lt;/span&gt; Mauritania">Mauritania</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mu rounded'&gt;&lt;/span&gt; Mauritius">Mauritius</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-yt rounded'&gt;&lt;/span&gt; Mayotte">Mayotte</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mx rounded'&gt;&lt;/span&gt; Mexico">Mexico</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-fm rounded'&gt;&lt;/span&gt; Micronesia Federated States Of">Micronesia Federated States Of</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-md rounded'&gt;&lt;/span&gt; Moldova">Moldova</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mc rounded'&gt;&lt;/span&gt; Monaco">Monaco</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mn rounded'&gt;&lt;/span&gt; Mongolia">Mongolia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-me rounded'&gt;&lt;/span&gt; Montenegro">Montenegro</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ms rounded'&gt;&lt;/span&gt; Montserrat">Montserrat</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ma rounded'&gt;&lt;/span&gt; Morocco">Morocco</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mz rounded'&gt;&lt;/span&gt; Mozambique">Mozambique</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mm rounded'&gt;&lt;/span&gt; Myanmar">Myanmar</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-na rounded'&gt;&lt;/span&gt; Namibia">Namibia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nr rounded'&gt;&lt;/span&gt; Nauru">Nauru</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-np rounded'&gt;&lt;/span&gt; Nepal">Nepal</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nl rounded'&gt;&lt;/span&gt; Netherlands">Netherlands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-an rounded'&gt;&lt;/span&gt; Netherlands Antilles">Netherlands Antilles</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nc rounded'&gt;&lt;/span&gt; New Caledonia">New Caledonia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nz rounded'&gt;&lt;/span&gt; New Zealand">New Zealand</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ni rounded'&gt;&lt;/span&gt; Nicaragua">Nicaragua</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ne rounded'&gt;&lt;/span&gt; Niger">Niger</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ng rounded'&gt;&lt;/span&gt; Nigeria">Nigeria</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nu rounded'&gt;&lt;/span&gt; Niue">Niue</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nf rounded'&gt;&lt;/span&gt; Norfolk Island">Norfolk Island</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mp rounded'&gt;&lt;/span&gt; Northern Mariana Islands">Northern Mariana Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-no rounded'&gt;&lt;/span&gt; Norway">Norway</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-om rounded'&gt;&lt;/span&gt; Oman">Oman</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pk rounded'&gt;&lt;/span&gt; Pakistan">Pakistan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pw rounded'&gt;&lt;/span&gt; Palau">Palau</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ps rounded'&gt;&lt;/span&gt; Palestinian Territory}, Occupied">Palestinian Territory}, Occupied</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pa rounded'&gt;&lt;/span&gt; Panama">Panama</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pg rounded'&gt;&lt;/span&gt; Papua New Guinea">Papua New Guinea</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-py rounded'&gt;&lt;/span&gt; Paraguay">Paraguay</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pe rounded'&gt;&lt;/span&gt; Peru">Peru</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ph rounded'&gt;&lt;/span&gt; Philippines">Philippines</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pn rounded'&gt;&lt;/span&gt; Pitcairn">Pitcairn</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pl rounded'&gt;&lt;/span&gt; Poland">Poland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pt rounded'&gt;&lt;/span&gt; Portugal">Portugal</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pr rounded'&gt;&lt;/span&gt; Puerto Rico">Puerto Rico</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-qa rounded'&gt;&lt;/span&gt; Qatar">Qatar</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-re rounded'&gt;&lt;/span&gt; Reunion">Reunion</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ro rounded'&gt;&lt;/span&gt; Romania">Romania</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ru rounded'&gt;&lt;/span&gt; Russian Federation">Russian Federation</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-rw rounded'&gt;&lt;/span&gt; Rwanda">Rwanda</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-bl rounded'&gt;&lt;/span&gt; Saint Barthelemy">Saint Barthelemy</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sh rounded'&gt;&lt;/span&gt; Saint Helena">Saint Helena</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-kn rounded'&gt;&lt;/span&gt; Saint Kitts And Nevis">Saint Kitts And Nevis</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lc rounded'&gt;&lt;/span&gt; Saint Lucia">Saint Lucia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-mf rounded'&gt;&lt;/span&gt; Saint Martin">Saint Martin</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-pm rounded'&gt;&lt;/span&gt; Saint Pierre And Miquelon">Saint Pierre And Miquelon</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-vc rounded'&gt;&lt;/span&gt; Saint Vincent And Grenadines">Saint Vincent And Grenadines</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ws rounded'&gt;&lt;/span&gt; Samoa">Samoa</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sm rounded'&gt;&lt;/span&gt; San Marino">San Marino</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-st rounded'&gt;&lt;/span&gt; Sao Tome And Principe">Sao Tome And Principe</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sa rounded'&gt;&lt;/span&gt; Saudi Arabia">Saudi Arabia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sn rounded'&gt;&lt;/span&gt; Senegal">Senegal</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-rs rounded'&gt;&lt;/span&gt; Serbia">Serbia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sc rounded'&gt;&lt;/span&gt; Seychelles">Seychelles</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sl rounded'&gt;&lt;/span&gt; Sierra Leone">Sierra Leone</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sg rounded'&gt;&lt;/span&gt; Singapore">Singapore</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sk rounded'&gt;&lt;/span&gt; Slovakia">Slovakia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-si rounded'&gt;&lt;/span&gt; Slovenia">Slovenia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sb rounded'&gt;&lt;/span&gt; Solomon Islands">Solomon Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-so rounded'&gt;&lt;/span&gt; Somalia">Somalia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-za rounded'&gt;&lt;/span&gt; South Africa">South Africa</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gs rounded'&gt;&lt;/span&gt; South Georgia And Sandwich Isl.">South Georgia And Sandwich Isl.</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-es rounded'&gt;&lt;/span&gt; Spain">Spain</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-lk rounded'&gt;&lt;/span&gt; Sri Lanka">Sri Lanka</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sd rounded'&gt;&lt;/span&gt; Sudan">Sudan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sr rounded'&gt;&lt;/span&gt; Suriname">Suriname</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sj rounded'&gt;&lt;/span&gt; Svalbard And Jan Mayen">Svalbard And Jan Mayen</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sz rounded'&gt;&lt;/span&gt; Swaziland">Swaziland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-se rounded'&gt;&lt;/span&gt; Sweden">Sweden</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ch rounded'&gt;&lt;/span&gt; Switzerland">Switzerland</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-sy rounded'&gt;&lt;/span&gt; Syrian Arab Republic">Syrian Arab Republic</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tw rounded'&gt;&lt;/span&gt; Taiwan">Taiwan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tj rounded'&gt;&lt;/span&gt; Tajikistan">Tajikistan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tz rounded'&gt;&lt;/span&gt; Tanzania">Tanzania</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-th rounded'&gt;&lt;/span&gt; Thailand">Thailand</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tl rounded'&gt;&lt;/span&gt; Timor-Leste">Timor-Leste</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tg rounded'&gt;&lt;/span&gt; Togo">Togo</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tk rounded'&gt;&lt;/span&gt; Tokelau">Tokelau</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-to rounded'&gt;&lt;/span&gt; Tonga">Tonga</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tt rounded'&gt;&lt;/span&gt; Trinidad And Tobago">Trinidad And Tobago</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tn rounded'&gt;&lt;/span&gt; Tunisia">Tunisia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tr rounded'&gt;&lt;/span&gt; Turkey">Turkey</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tm rounded'&gt;&lt;/span&gt; Turkmenistan">Turkmenistan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tc rounded'&gt;&lt;/span&gt; Turks And Caicos Islands">Turks And Caicos Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-tv rounded'&gt;&lt;/span&gt; Tuvalu">Tuvalu</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ug rounded'&gt;&lt;/span&gt; Uganda">Uganda</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ua rounded'&gt;&lt;/span&gt; Ukraine">Ukraine</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ae rounded'&gt;&lt;/span&gt; United Arab Emirates">United Arab Emirates</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-gb rounded'&gt;&lt;/span&gt; United Kingdom">United Kingdom</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-us rounded'&gt;&lt;/span&gt; United States">United States</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-um rounded'&gt;&lt;/span&gt; United States Outlying Islands">United States Outlying Islands</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-uy rounded'&gt;&lt;/span&gt; Uruguay">Uruguay</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-uz rounded'&gt;&lt;/span&gt; Uzbekistan">Uzbekistan</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-vu rounded'&gt;&lt;/span&gt; Vanuatu">Vanuatu</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ve rounded'&gt;&lt;/span&gt; Venezuela">Venezuela</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-vn rounded'&gt;&lt;/span&gt; Viet Nam">Viet Nam</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-vg rounded'&gt;&lt;/span&gt; Virgin Islands - British">Virgin Islands - British</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-vi rounded'&gt;&lt;/span&gt; Virgin Islands - U.S.">Virgin Islands - U.S.</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-wf rounded'&gt;&lt;/span&gt; Wallis And Futuna">Wallis And Futuna</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-eh rounded'&gt;&lt;/span&gt; Western Sahara">Western Sahara</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-ye rounded'&gt;&lt;/span&gt; Yemen">Yemen</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-zm rounded'&gt;&lt;/span&gt; Zambia">Zambia</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-zw rounded'&gt;&lt;/span&gt; Zimbabwe">Zimbabwe</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-2">
+                              <div class="form-group mb-3">
+                                <label>Newsletter</label>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="form-group mb-3">
+                                <div class="radio">
+                                  <label class="d-inline-block">Yes
+                                    <input type="radio" name="newsletter-yes-no"/>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-1">
+                              <div class="form-group mb-3"><a class="create-btn__next-step btn-success" href="#">Save</a></div>
+                            </div>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>

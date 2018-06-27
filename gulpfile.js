@@ -40,9 +40,10 @@ const paths = {
         dest: 'build/assets/'
     },
     images: {
-        src: 'src/images/*/*.*',
+        src: 'src/images/**/*.*',
         dest: 'build/assets/img/'
     },
+
     // svgIcons: {
     //     src: 'src/svg/*.svg',
     //     dest: 'build/assets/img/sprite/'

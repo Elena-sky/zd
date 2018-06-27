@@ -40,6 +40,7 @@
 		background: $white;
 		margin-bottom: 1rem;
 		padding-top: 20%;
+		border-radius: 5px;
 		img{
 			display: block;
 			margin: 0 auto;
@@ -56,6 +57,22 @@
 		text-align: center;
 		.dropdown-menu{
 			margin: 0 auto	;
+		}
+	}
+	.create-member{
+		width: 170px;
+		height: 170px;
+		background: $white;
+		border: 1px solid $success;
+		color: $success;
+		border-radius: 5px;
+		.fa,
+		span{
+			display: block;
+			text-align: center;
+		}
+		.fa{
+			font-size: 2rem;
 		}
 	}
 }
