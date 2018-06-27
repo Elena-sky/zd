@@ -30,7 +30,9 @@ form.settings-form
         .col-md-4
             .form-group.mb-3
                 select.selectpicker.form-control.select-lang
-                    include lang-list
+                    option(data-content='<span class="flag-icon flag-icon-gb rounded"></span> English') English
+                    option(data-content="<span class='flag-icon flag-icon-de rounded'></span> Germany") Dutch
+                    option(data-content="<span class='flag-icon flag-icon-fr rounded'></span> France") France
     .row
         .col-md-2
             .form-group.mb-3
