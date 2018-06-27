@@ -133,6 +133,15 @@ $slick-loader-path: "../fonts/slick/";
 $slick-font-family: FontAwesome;
 $flag-icon-css-path: '../img/flags';
 
+$pretty--color-default: $secondary;
+$pretty--color-primary: $primary;
+$pretty--color-info: $info;
+$pretty--color-success: $success;
+$pretty--color-warning: $warning;
+$pretty--color-danger: $danger;
+$pretty--color-dark: #5a656b;
+
+
 // Breadcrumbs
 
 $breadcrumb-padding-y:              .5rem;

@@ -35,13 +35,17 @@ form.settings-form
         .col-md-2
             .form-group.mb-3
                 label Newsletter
-        .col-md-2
+        .col-md-3
             .form-group.mb-3
-                .radio
-                    label.d-inline-block Yes
-                        input(type="radio" name="newsletter-yes-no")
-
+                .pretty.p-default.p-round
+                    input(type='radio', name='newsletter-yes-no' , checked="checked")
+                    .state.p-success-o
+                        label Yes
+                .pretty.p-default.p-round
+                    input(type='radio', name='newsletter-yes-no')
+                    .state.p-success-o
+                        label No
     .row
-        .col-md-1
+        .col-md-6
             .form-group.mb-3
                 a(href="#").create-btn__next-step.btn-success Save
