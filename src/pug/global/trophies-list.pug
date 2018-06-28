@@ -1,28 +1,40 @@
 ul.trophies-list.clearfix
     li.trophies-list-item.active
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-01.svg")
     li.trophies-list-item.active
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-02.svg")
     li.trophies-list-item.active
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-03.svg")
     li.trophies-list-item
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-04.svg")
     li.trophies-list-item
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-05.svg")
     li.trophies-list-item
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-06.svg")
     li.trophies-list-item
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-07.svg")
     li.trophies-list-item
-        a.trophies-link
+        span.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-08.svg")
     li.trophies-list-item
-        a.trophies-link
+        a.trophies-link( title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
             img(src="assets/img/trophies/trophies-09.svg")
+script(src="assets/js/tooltipster.bundle.js")
+script.
+    $('.trophies-link').tooltipster({
+        //animation: 'fade',
+        delay: 500,
+        side: 'top',
+        multiple: true,
+        touchDevices: true,
+        theme: 'tooltipster-shadow',
+        autoClose: false,
+        trigger: 'click'
+    });

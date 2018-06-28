@@ -6,7 +6,7 @@
 		float: left;
 		width: 80px;
 		height: 80px;
-
+		position: relative;
 	}
 	&-item + &-item{
 		margin-left: 10px;
@@ -15,6 +15,13 @@
 		display: block;
 		width: 100%;
 		height: 100%;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active{
+			cursor: pointer;
+			outline: 0;
+		}
 	}
 	.trophies-link img{
 		display: block;

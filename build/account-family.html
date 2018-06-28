@@ -10,9 +10,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
       <!--styles-->
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css"/>
-      <link rel="stylesheet" type="text/css" href="assets/css/app.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/themes/tooltipster-shadow.min.css"/>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="assets/css/app.min.css"/>
       <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
       <script src="assets/js/create-user.js"></script>
@@ -57,8 +58,8 @@
                   <div class="col-xs-12">
                     <ul class="nav nav-tabs" id="myAccount" style="margin-bottom: 15px;">
                       <li><a class="my-account-link" href="#family" data-toggle="tab">My family<i class="fa fa-users"></i></a></li>
-                      <li><a class="my-account-link" href="#trophies" data-toggle="tab">My trophies<i class="fa fa-trophy"></i></a></li>
-                      <li class="active"><a class="my-account-link" href="#settings" data-toggle="tab">Settings<i class="fa fa fa-cogs"></i></a></li>
+                      <li class="active"><a class="my-account-link" href="#trophies" data-toggle="tab">My trophies<i class="fa fa-trophy"></i></a></li>
+                      <li><a class="my-account-link" href="#settings" data-toggle="tab">Settings<i class="fa fa fa-cogs"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -108,20 +109,33 @@
                           </li>
                         </ul>
                       </div>
-                      <div class="tab-pane panel panel-pink p-4 fade" id="trophies">
+                      <div class="tab-pane panel panel-pink p-4 fade in active" id="trophies">
                         <ul class="trophies-list clearfix">
-                          <li class="trophies-list-item active"><a class="trophies-link"><img src="assets/img/trophies/trophies-01.svg"/></a></li>
-                          <li class="trophies-list-item active"><a class="trophies-link"><img src="assets/img/trophies/trophies-02.svg"/></a></li>
-                          <li class="trophies-list-item active"><a class="trophies-link"><img src="assets/img/trophies/trophies-03.svg"/></a></li>
-                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-04.svg"/></a></li>
-                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-05.svg"/></a></li>
-                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-06.svg"/></a></li>
-                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-07.svg"/></a></li>
-                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-08.svg"/></a></li>
-                          <li class="trophies-list-item"><a class="trophies-link"><img src="assets/img/trophies/trophies-09.svg"/></a></li>
+                          <li class="trophies-list-item active"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-01.svg"/></span></li>
+                          <li class="trophies-list-item active"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-02.svg"/></span></li>
+                          <li class="trophies-list-item active"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-03.svg"/></span></li>
+                          <li class="trophies-list-item"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-04.svg"/></span></li>
+                          <li class="trophies-list-item"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-05.svg"/></span></li>
+                          <li class="trophies-list-item"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-06.svg"/></span></li>
+                          <li class="trophies-list-item"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-07.svg"/></span></li>
+                          <li class="trophies-list-item"><span class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-08.svg"/></span></li>
+                          <li class="trophies-list-item"><a class="trophies-link" title="My trophies ... Lorem ipsum dolor sit amet, consectetuer adipiscing elit"><img src="assets/img/trophies/trophies-09.svg"/></a></li>
                         </ul>
+                        <script src="assets/js/tooltipster.bundle.js"></script>
+                        <script>
+                          $('.trophies-link').tooltipster({
+                              //animation: 'fade',
+                              delay: 500,
+                              side: 'top',
+                              multiple: true,
+                              touchDevices: true,
+                              theme: 'tooltipster-shadow',
+                              autoClose: false,
+                              trigger: 'click'
+                          });
+                        </script>
                       </div>
-                      <div class="tab-pane panel panel-success p-4 fade in active" id="settings">
+                      <div class="tab-pane panel panel-success p-4 fade" id="settings">
                         <form class="settings-form">
                           <div class="row">
                             <div class="col-md-2">
@@ -169,7 +183,7 @@
                               <div class="form-group mb-3">
                                 <select class="selectpicker form-control select-lang">
                                   <option data-content="&lt;span class=&quot;flag-icon flag-icon-gb rounded&quot;&gt;&lt;/span&gt; English">English</option>
-                                  <option data-content="&lt;span class='flag-icon flag-icon-de rounded'&gt;&lt;/span&gt; Germany">Dutch</option>
+                                  <option data-content="&lt;span class='flag-icon flag-icon-nl rounded'&gt;&lt;/span&gt; Dutch">Dutch</option>
                                   <option data-content="&lt;span class='flag-icon flag-icon-fr rounded'&gt;&lt;/span&gt; France">France</option>
                                 </select>
                               </div>

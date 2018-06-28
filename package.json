@@ -44,6 +44,7 @@
     "flag-icon-css": "^3.0.0",
     "jquery": "^1.9.1",
     "js-info-bubble": "^0.8.0",
-    "pretty-checkbox": "^3.0.3"
+    "pretty-checkbox": "^3.0.3",
+    "tooltipster": "^4.2.6"
   }
 }

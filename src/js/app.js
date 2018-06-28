@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var slick = require('slick-carousel');
-var selectpicker= require('bootstrap-select');
+var selectpicker = require('bootstrap-select');
 
 $(document).ready(function(){
     $('.big-trees-item.rating').click(function(){
@@ -43,6 +43,5 @@ $(document).ready(function(){
                 }
             }
         ]
-    })
-
+    });
 });

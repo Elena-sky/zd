@@ -1,0 +1,27 @@
+.tooltipster{
+	&-base{
+		max-width: 320px;
+		text-align: center;
+	}
+	&-shadow{
+		.tooltipster-content{
+			padding: 15px;
+		}
+	}
+
+	&-fade{
+		opacity: 1;
+	}
+	&-top{
+		&:after{
+			content: "";
+			border-left: 12px solid transparent !important;
+			border-right: 12px solid transparent !important;
+			border-top: 12px solid $white;
+			top: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

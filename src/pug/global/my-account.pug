@@ -6,11 +6,11 @@
                     a.my-account-link(href='#family', data-toggle='tab')
                         |My family
                         i.fa.fa-users
-                li
+                li.active
                     a.my-account-link(href='#trophies', data-toggle='tab')
                         | My trophies
                         i.fa.fa-trophy
-                li.active
+                li
                     a.my-account-link(href='#settings', data-toggle='tab')
                         | Settings
                         i.fa.fa.fa-cogs
@@ -57,7 +57,7 @@
 
 
 
-                #trophies.tab-pane.panel.panel-pink.p-4.fade
+                #trophies.tab-pane.panel.panel-pink.p-4.fade.in.active
                     include trophies-list
-                #settings.tab-pane.panel.panel-success.p-4.fade.in.active
+                #settings.tab-pane.panel.panel-success.p-4.fade
                     include form-settings
