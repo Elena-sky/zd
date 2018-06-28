@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var slick = require('slick-carousel');
 var selectpicker = require('bootstrap-select');
+var datetimepicker = require('eonasdan-bootstrap-datetimepicker');
 
 $(document).ready(function(){
     $('.big-trees-item.rating').click(function(){
@@ -43,5 +44,9 @@ $(document).ready(function(){
                 }
             }
         ]
+    });
+    $('#datetimepicker12').datetimepicker({
+        inline: true,
+        format: 'Do MMM'
     });
 });

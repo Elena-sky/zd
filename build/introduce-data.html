@@ -12,10 +12,12 @@
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css"/>
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/themes/tooltipster-shadow.min.css"/>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
       <link rel="stylesheet" type="text/css" href="assets/css/app.min.css"/>
       <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src"https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js="src"https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
       <script src="assets/js/create-user.js"></script>
       <script src="assets/js/bundle.js"></script><!--[if lt IE 9]><!-->
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -117,15 +119,9 @@
                     <div class="panel-header">
                       <h3 class="text-center">Suivez votre évolution</h3>
                     </div>
-                    <div class="panel-body"><img src="assets/img/global/follow.gif" alt="#"/></div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-xs-12 px-1">
-                  <div class="panel panel-info pt-4">
-                    <div class="panel-header">
-                      <h3 class="text-center">Revecez des conseils adaptés</h3>
+                    <div class="form-group p-3">
+                      <div id="datetimepicker12"></div>
                     </div>
-                    <div class="panel-body"><img src="assets/img/global/reveive.gif" alt="#"/></div>
                   </div>
                 </div>
               </div>
@@ -134,84 +130,6 @@
         </div>
       </section>
     </div>
-    <!--Login modal-->
-    <div class="modal multi-step" id="loginModal">
-      <div class="container">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header pb-0">
-              <button class="close" type="button" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-xs-4">
-                  <div class="d-block"><img class="img-responsive" src="assets/img/global/man.png"/></div>
-                </div>
-                <div class="col-xs-8 pr-5">
-                  <h2 class="mb-20">Connetction</h2>
-                  <form class="w-100">
-                    <div class="form-group mb-3">
-                      <input class="welcome-modal--input mb-20" type="email" placeholder="E-mail" name="" value="" required="required"/>
-                    </div>
-                    <div class="form-group mb-3">
-                      <input class="welcome-modal--input mb-20" type="password" placeholder="Password" name="" value="" required="required"/>
-                    </div>
-                    <div class="form-group mb-3"><a class="create-btn__next-step btn-success" href="#">Login</a></div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Sign Up modal-->
-    <form class="modal multi-step" id="signUpModal">
-      <div class="container">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header pb-0">
-              <button class="close" type="button" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-xs-4">
-                  <div class="d-block"><img class="img-responsive" src="assets/img/global/man.png"/></div>
-                </div>
-                <div class="col-xs-8 pr-5">
-                  <div class="welcome-modal step step-1 bounceInDown" data-step="1">
-                    <h3 class="welcome-modal--title">Welcome & Congrats</h3>
-                    <p class="welcome-modal--text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                  </div>
-                  <div class="welcome-modal step step-2 bounceInDown" data-step="2">
-                    <p class="welcome-modal--text">Nice to meet you! My name is SMOGEY, and I’m really happy that you’re here.</p>
-                    <p class="welcome-modal--text">During the following months I’ll be here to help you in the waste reducing.</p>
-                    <p class="welcome-modal--text text-bold">What’s your name my friend?</p>
-                    <input class="welcome-modal--input" id="welcome-user-name" type="text" placeholder="Name" name="welcome-user--name" value="" required="required"/>
-                  </div>
-                  <div class="welcome-modal step step-3 bounceInDown" data-step="3">
-                    <h3 class="welcome-modal--title">3</h3>
-                    <p class="welcome-modal--text">3 text</p>
-                  </div>
-                </div>
-                <div class="col-xs-12">
-                  <button class="welcome-modal--next step step-1" type="button" data-step="1" onclick="sendEvent('#signUpModal', 2)"><i class="fa fa-arrow-right"></i></button>
-                  <button class="welcome-modal--next step step-2" type="button" data-step="2" onclick="sendEvent('#signUpModal', 3)"><i class="fa fa-arrow-right"></i></button>
-                  <button class="welcome-modal--next step step-3" type="button" data-step="3" onclick="sendEvent('#signUpModal', 4)"><i class="fa fa-arrow-right"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
   </body>
-  <script src="assets/js/multi-step-modal.js"></script>
-  <script>
-    sendEvent = function (sel, step) {
-    	$(sel).trigger('next.m.' + step);
-    }
-  </script>
 </html>
+<script></script>
