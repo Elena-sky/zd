@@ -7,9 +7,7 @@
 		width: 80px;
 		height: 80px;
 		position: relative;
-	}
-	&-item + &-item{
-		margin-left: 10px;
+		margin: 15px;
 	}
 	.trophies-link{
 		display: block;
@@ -34,13 +32,17 @@
 		filter: grayscale(100%);
 		filter: gray; /* IE 6-9 */
 	}
-	&-item.active{
-		.trophies-link img{
-			-webkit-filter: grayscale(0);
-			-moz-filter: grayscale(0);
-			-ms-filter: grayscale(0);
-			-o-filter: grayscale(0);
-			filter: grayscale(0);
+	&-item.active,
+	&-item:focus,
+	&-item:hover{
+		.trophies-link{
+			img{
+				-webkit-filter: grayscale(0);
+				-moz-filter: grayscale(0);
+				-ms-filter: grayscale(0);
+				-o-filter: grayscale(0);
+				filter: grayscale(0);
+			}
 		}
 	}
 }
