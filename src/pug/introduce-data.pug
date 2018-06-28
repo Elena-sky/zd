@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'Introduce data'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row.mb-20
+								.col-xs-12
+									.bg-gray-light.w-100.py-2.clearfix
+										.col-xs-6
+											a(href="#").my-account-avatars.clearfix
+												.my-account-avatars-title My account
+												ul.my-account-avatars-list
+													li.my-account-avatars-father
+														img(src="assets/img/myaccount/man.svg")
+													li.my-account-avatars-mother
+														img(src="assets/img/myaccount/woman.svg")
+													li.my-account-avatars-boy1
+														img(src="assets/img/myaccount/boy2.svg")
+													li.my-account-avatars-boy2
+														img(src="assets/img/myaccount/boy.svg")
+													li.my-account-avatars-douther
+														img(src="assets/img/myaccount/girl.svg")
+										.col-xs-6
+
+											a.d-inline-block.btn.btn-success.float-right(href="index.html", role="button")
+												span Retour
+											a.d-inline-block.float-right.mr-3(href="#", role="button")
+												.account-trophi
+													span 3
+													img(src="assets/img/global/cup.svg")
+							.row.mb-20
+								.col-xs-12
+									a.btn.btn-default.bg-gray-light
+										| Introduce Data
+										i.fa.fa-folder-open.ml-3
+
+		//Login modal
+		#loginModal.modal.multi-step
+			.container
+				.modal-dialog
+					// Modal content
+					.modal-content
+						.modal-header.pb-0
+							button.close(type='button' data-dismiss='modal') &times;
+						.modal-body
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man.png")
+								.col-xs-8.pr-5
+									h2.mb-20 Connetction
+									form.w-100
+										.form-group.mb-3
+											input(type="email", placeholder="E-mail",
+											name="", value="",required).welcome-modal--input.mb-20
+										.form-group.mb-3
+											input(type="password", placeholder="Password",
+											name="", value="",required).welcome-modal--input.mb-20
+										.form-group.mb-3
+											a(href="#").create-btn__next-step.btn-success Login
+
+
+		// Sign Up modal
+		form#signUpModal.modal.multi-step
+			.container
+				.modal-dialog
+					// Modal content
+					.modal-content
+						.modal-header.pb-0
+							button.close(type='button' data-dismiss='modal') &times;
+						.modal-body
+							.row
+								.col-xs-4
+									.d-block
+										img.img-responsive(src="assets/img/global/man.png")
+								.col-xs-8.pr-5
+									.welcome-modal.step.step-1.bounceInDown(data-step='1')
+										h3.welcome-modal--title Welcome & Congrats
+										p.welcome-modal--text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+									.welcome-modal.step.step-2.bounceInDown(data-step='2')
+										p.welcome-modal--text Nice to meet you! My name is SMOGEY, and I’m really happy that you’re here.
+										p.welcome-modal--text During the following months I’ll be here to help you in the waste reducing.
+										p.welcome-modal--text.text-bold What’s your name my friend?
+										input#welcome-user-name(type="text", placeholder="Name", name="welcome-user--name", value="",required).welcome-modal--input
+									.welcome-modal.step.step-3.bounceInDown(data-step='3')
+										h3.welcome-modal--title 3
+										p.welcome-modal--text 3 text
+								.col-xs-12
+									button(type='button', data-step="1", onclick="sendEvent('#signUpModal', 2)").welcome-modal--next.step.step-1
+										i.fa.fa-arrow-right
+									button(type='button', data-step="2", onclick="sendEvent('#signUpModal', 3)").welcome-modal--next.step.step-2
+										i.fa.fa-arrow-right
+									button(type='button', data-step="3", onclick="sendEvent('#signUpModal', 4)").welcome-modal--next.step.step-3
+										i.fa.fa-arrow-right
+
+
+
+	script(src="assets/js/multi-step-modal.js")
+	script.
+		sendEvent = function (sel, step) {
+			$(sel).trigger('next.m.' + step);
+		}
+
+
+
+

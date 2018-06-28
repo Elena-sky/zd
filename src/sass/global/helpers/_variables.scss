@@ -65,7 +65,6 @@ $brand-danger:          $danger;
 .gray-dark  {color:$gray-800;}
 .black   		{color:$black;}
 
-.bg-gray				{background-color: $gray !important; }
 .bg-blue        {background-color:$blue !important; }
 .bg-indigo      {background-color:$indigo !important; }
 .bg-pink        {background-color:$pink !important; }
@@ -76,6 +75,7 @@ $brand-danger:          $danger;
 .bg-teal        {background-color:$teal !important; }
 .bg-cyan        {background-color:$cyan !important; }
 .bg-white       {background-color:$white !important; }
+.bg-gray-light        {background-color:$gray-200 !important; }
 .bg-gray        {background-color:$gray !important; }
 .bg-gray-dark   {background-color:$gray-800 !important; }
 .bg-black   		{background-color:$black !important; }
