@@ -1,0 +1,77 @@
+.kind-trash{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1rem;
+	li{
+		display: inline-block;
+		float: left;
+	}
+	&-item{
+		display: block;
+		position: relative;
+		height: 100px;
+		width: 75px;
+		margin: 0 auto;
+		input{
+			opacity: 0;
+		}
+	}
+	&-mark{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 73%;
+		&:hover{
+			cursor: pointer;
+			&:before{
+				box-shadow: 0 4px 8px 1px rgba(0,0,0,0.2);
+				content: "";
+				width: 80%;
+				height: 80%;
+				left: 10%;
+				top: 10%;
+			}
+		}
+		&.glass{  background: url("../img/waste/glass1.svg") no-repeat bottom center;  background-size: 73%;}
+		&.plastic{  background: url("../img/waste/plastic1.svg") no-repeat bottom center;  background-size: 73%;}
+		&.organic{  background: url("../img/waste/organic1.svg") no-repeat bottom center;  background-size: 73%;}
+		&.metal{  background: url("../img/waste/metal1.svg") no-repeat bottom center;  background-size: 73%;}
+		&.paper{  background: url("../img/waste/paper1.svg") no-repeat bottom center;  background-size: 73%;}
+		&.batteries{  background: url("../img/waste/batteries1.svg") no-repeat bottom center;  background-size: 73%;}
+	}
+	&-item input:checked ~ .kind-trash-mark{
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation-name: bounce;
+		animation-name: bounce;
+	}
+	&-item input:checked ~ .kind-trash-mark.glass{
+		background: url("../img/waste/glass2.svg") no-repeat bottom center;
+		background-size: 75%;
+	}
+	&-item input:checked ~ .kind-trash-mark.plastic{
+		background: url("../img/waste/plastic2.svg") no-repeat bottom center;
+		background-size: 75%;
+	}
+	&-item input:checked ~ .kind-trash-mark.organic{
+		background: url("../img/waste/organic2.svg") no-repeat bottom center;
+		background-size: 75%;
+	}
+	&-item input:checked ~ .kind-trash-mark.metal{
+		background: url("../img/waste/metal2.svg") no-repeat bottom center;
+		background-size: 75%;
+	}
+	&-item input:checked ~ .kind-trash-mark.paper{
+		background: url("../img/waste/paper2.svg") no-repeat bottom center;
+		background-size: 75%;
+	}
+	&-item input:checked ~ .kind-trash-mark.batteries{
+		background: url("../img/waste/batteries2.svg") no-repeat bottom center;
+		background-size: 75%;
+	}
+}

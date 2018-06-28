@@ -56,6 +56,26 @@ html(lang="en")
 									a.btn.btn-default.bg-gray-light
 										| Introduce Data
 										i.fa.fa-folder-open.ml-3
+							.row.mx-0.mb-20
+								.col-xs-12.px-1
+									.panel.panel-warning.pt-4
+										.panel-header
+											h3.text-center Choisissez le type de poubelle que vous pesez
+										include global/kind-of-trash
+
+								.col-sm-6.col-xs-12.px-1
+									.panel.panel-success.pt-4
+										.panel-header
+											h3.text-center Suivez votre évolution
+										.panel-body
+											img(src='assets/img/global/follow.gif', alt='#')
+
+								.col-sm-6.col-xs-12.px-1
+									.panel.panel-info.pt-4
+										.panel-header
+											h3.text-center Revecez des conseils adaptés
+										.panel-body
+											img(src='assets/img/global/reveive.gif', alt='#')
 
 		//Login modal
 		#loginModal.modal.multi-step
