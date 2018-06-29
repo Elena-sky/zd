@@ -1,0 +1,42 @@
+.evolution{
+	display: inline-block;
+	float: right;
+	&-on{
+		text-align: left;
+		float: right;
+		vertical-align: middle;
+		&.pretty .state label:before,
+		&.pretty .state label:after{
+			top: 9px;
+		}
+		&.pretty.p-switch .state label:before,
+		&.pretty.p-switch .state label:after{
+			left: auto;
+			right: 1rem;
+		}
+		&.pretty.p-switch .state label:before{
+			left: auto;
+			right: 1rem;
+
+		}
+		&.pretty.p-switch input:checked ~ .state label:after{
+			left: auto;
+			right: 0;
+		}
+		.state{
+			font-size: 1.2rem;
+			line-height: 40px;
+			padding-right: 3rem;
+			&:before{
+				right: 0;
+			}
+
+			label{
+				span{
+
+				}
+			}
+		}
+	}
+
+}

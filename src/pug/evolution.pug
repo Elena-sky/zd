@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'My evolution'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row.mb-20
+								.col-xs-12
+									.bg-gray-light.w-100.py-2.clearfix
+										.col-xs-6
+											a(href="#").my-account-avatars.clearfix
+												.my-account-avatars-title My account
+												ul.my-account-avatars-list
+													li.my-account-avatars-father
+														img(src="assets/img/myaccount/man.svg")
+													li.my-account-avatars-mother
+														img(src="assets/img/myaccount/woman.svg")
+													li.my-account-avatars-boy1
+														img(src="assets/img/myaccount/boy2.svg")
+													li.my-account-avatars-boy2
+														img(src="assets/img/myaccount/boy.svg")
+													li.my-account-avatars-douther
+														img(src="assets/img/myaccount/girl.svg")
+										.col-xs-6
+											a.d-inline-block.btn.btn-success.float-right(href="index.html", role="button")
+												span Retour
+											a.d-inline-block.float-right.mr-3(href="#", role="button")
+												.account-trophi
+													span 3
+													img(src="assets/img/global/cup.svg")
+							.row.mb-20
+								.col-xs-6
+									a.btn.btn-default.bg-gray-light
+										| My evolution
+										i.fa.fa-bar-chart.ml-3
+								.col-xs-6
+									.pretty.p-switch.p-slim.evolution-on
+										input(type='checkbox')
+										.state.p-danger
+											label
+												span Compare result
+
+							.row.mx-0
+								.col-xs-12.px-1
+									.panel.panel-warning.pt-4
+										.panel-header.py-0
+											h3.text-center Choisissez le type de poubelle que vous pesez
+
+
+
+
+
+
+
+
+
