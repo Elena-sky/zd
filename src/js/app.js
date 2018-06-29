@@ -2,6 +2,7 @@ var $ = require('jquery');
 var slick = require('slick-carousel');
 var selectpicker = require('bootstrap-select');
 var datetimepicker = require('eonasdan-bootstrap-datetimepicker');
+var Chart = require('chart.js');
 
 $(document).ready(function(){
     $('.big-trees-item.rating').click(function(){
@@ -48,5 +49,37 @@ $(document).ready(function(){
     $('#datetimepicker12').datetimepicker({
         inline: true,
         format: 'Do MMM'
+    });
+
+
+    // Define data set for all charts
+    var dataOne = [1, 10, 5, 2, 20, 30, 45];
+    var dataTwo = [20, 30, 15, 12, 21, 30, 40];
+    myData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "Data 1",
+                fill: false,
+                backgroundColor: "rgb(254, 179, 42, 0.25)",
+                borderColor: "rgb(254, 179, 42)",
+                data: dataOne
+            },
+            {
+                label: "Data 2",
+                fill: true,
+                backgroundColor: "rgba(142, 184, 74, 0.25)",
+                borderColor: "rgb(142, 184, 74)",
+                data: dataTwo
+            }
+        ]
+    };
+
+    // Default chart defined with type: 'line'
+    Chart.defaults.global.defaultFontFamily = "inherit";
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: "line",
+        data: myData
     });
 });
