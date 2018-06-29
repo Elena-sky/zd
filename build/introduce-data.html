@@ -68,10 +68,10 @@
               <div class="row mb-20">
                 <div class="col-xs-12"><a class="btn btn-default bg-gray-light">Introduce Data<i class="fa fa-folder-open ml-3"></i></a></div>
               </div>
-              <div class="row mx-0 mb-20">
+              <div class="row mx-0">
                 <div class="col-xs-12 px-1">
                   <div class="panel panel-warning pt-4">
-                    <div class="panel-header">
+                    <div class="panel-header py-0">
                       <h3 class="text-center">Choisissez le type de poubelle que vous pesez</h3>
                     </div>
                     <ul class="kind-trash clearfix">
@@ -114,14 +114,30 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+              <div class="row mx-0 mb-20 oneHeight">
                 <div class="col-sm-6 col-xs-12 px-1">
-                  <div class="panel panel-success pt-4">
-                    <div class="panel-header">
+                  <div class="panel panel-success">
+                    <div class="panel-header py-0">
                       <h3 class="text-center">Suivez votre évolution</h3>
                     </div>
-                    <div class="form-group p-3">
+                    <div class="form-group px-3">
                       <div id="datetimepicker12"></div>
                     </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 px-1">
+                  <div class="panel panel-success">
+                    <div class="panel-bg-waste"></div>
+                    <div class="panel-header">
+                      <h3 class="text-center">Quel est le poids de la poubelle?</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="form-group">
+                        <input class="form-control text-black welcome-modal--input" type="number" value="00.00" min="00.00" max="20.00" step="00.10" placeholder="00.00 KG"/>
+                      </div>
+                    </div>
+                    <div class="panel-footer p-3"></div>
                   </div>
                 </div>
               </div>
@@ -132,4 +148,3 @@
     </div>
   </body>
 </html>
-<script></script>

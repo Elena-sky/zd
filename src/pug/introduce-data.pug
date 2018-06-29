@@ -56,21 +56,29 @@ html(lang="en")
 									a.btn.btn-default.bg-gray-light
 										| Introduce Data
 										i.fa.fa-folder-open.ml-3
-							.row.mx-0.mb-20
+							.row.mx-0
 								.col-xs-12.px-1
 									.panel.panel-warning.pt-4
-										.panel-header
+										.panel-header.py-0
 											h3.text-center Choisissez le type de poubelle que vous pesez
 										include global/kind-of-trash
-
+							.row.mx-0.mb-20.oneHeight
 								.col-sm-6.col-xs-12.px-1
-									.panel.panel-success.pt-4
-										.panel-header
+									.panel.panel-success
+										.panel-header.py-0
 											h3.text-center Suivez votre évolution
-										.form-group.p-3
+										.form-group.px-3
 											#datetimepicker12
-
-script.
+								.col-sm-6.col-xs-12.px-1
+									.panel.panel-success
+										.panel-bg-waste
+										.panel-header
+											h3.text-center Quel est le poids de la poubelle?
+										.panel-body
+											.form-group
+												input.form-control.text-black.welcome-modal--input(type="number" value="00.00" min="00.00"
+												max="20.00" step="00.10" placeholder="00.00 KG")
+										.panel-footer.p-3
 
 
 
