@@ -41,7 +41,7 @@ $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-800;
-$dark:          $gray-800;
+$default:       $gray-600;
 
 $facebook-color: #4165af;
 
@@ -86,6 +86,8 @@ $brand-danger:          $danger;
 .bg-danger      {background-color: $danger !important; }
 .bg-pink				{background-color: $pink !important; }
 .bg-pink-dark		{background-color: $pink-dark !important; }
+.bg-default		{background-color: $secondary !important; }
+.bg-secondary		{background-color: $secondary !important; }
 
 
 // This variable affects the `.h-*` and `.w-*` classes.

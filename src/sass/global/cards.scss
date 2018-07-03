@@ -80,6 +80,9 @@
 	&-warning{
 		@include bottom-border ($warning);
 	}
+	&-default{
+		@include bottom-border ($default);
+	}
 	&-bg-waste{
 		position: absolute;
 		top: 0;

@@ -1,0 +1,13 @@
+.pagination{
+	margin: 0 auto;
+	float: none;
+	&>.active>a,
+	&>.active>a:hover,
+	&>.active>a:focus,
+	&>.active>span,
+	&>.active>span:hover,
+	&>.active>span:focus{
+		background: $success;
+		border-color: $success;
+	}
+}
