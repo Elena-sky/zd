@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8"/>
+      <title>ZD</title>
+      <meta name="keywords" content="keywords"/>
+      <meta name="description" content="description"/>
+      <!--favicon-->
+      <!--viewport-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+      <!--styles-->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/themes/tooltipster-shadow.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/css/app.min.css"/>
+      <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src"https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js="src"https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+      <script src="assets/js/create-user.js"></script>
+      <script src="assets/js/bundle.js"></script><!--[if lt IE 9]><!-->
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<!--<![endif]-->
+    </head>
+  <body class="homepage">
+    <div class="wrapper">
+      <section class="main">
+        <div class="container py-3">
+          <article class="panel-list">
+            <div class="container-fluid">
+              <div class="row mb-20">
+                <div class="col-xs-12">
+                  <nav class="bread" aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
+                      <li class="breadcrumb-item"><a href="#">Initiatives sur Tournai</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">L'agenda des initiatives dans votre commune</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <div class="row mb-20">
+                <div class="col-xs-12">
+                  <div class="bg-warning clearfix py-2 px-3">
+                    <h4 class="d-inline-block text-white float-left">L'outil presque ZD</h4><a class="d-inline-block btn btn-outline-warning float-right" href="index.html" role="button"><span>Acceuil</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-20">
+                <div class="col-xs-12">
+                  <div class="bg-gray-light w-100 py-2 clearfix">
+                    <div class="col-xs-6"><a class="my-account-avatars clearfix" href="#">
+                        <div class="my-account-avatars-title">My account</div>
+                        <ul class="my-account-avatars-list">
+                          <li class="my-account-avatars-father"><img src="assets/img/myaccount/man.svg"/></li>
+                          <li class="my-account-avatars-mother"><img src="assets/img/myaccount/woman.svg"/></li>
+                          <li class="my-account-avatars-boy1"><img src="assets/img/myaccount/boy2.svg"/></li>
+                          <li class="my-account-avatars-boy2"><img src="assets/img/myaccount/boy.svg"/></li>
+                          <li class="my-account-avatars-douther"><img src="assets/img/myaccount/girl.svg"/></li>
+                        </ul></a></div>
+                    <div class="col-xs-6"><a class="d-inline-block btn btn-success float-right" href="index.html" role="button"><span>Retour</span></a><a class="d-inline-block float-right mr-3" href="#" role="button">
+                        <div class="account-trophi"><span>3</span><img src="assets/img/global/cup.svg"/></div></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-20">
+                <div class="col-xs-6"><a class="btn btn-default bg-gray-light">Gestes and actions<img class="ml-3" src="assets/img/global/bullseye.svg"/></a></div>
+              </div>
+              <div class="row mb-20">
+                <div class="col-md-3 col-sm-6">
+                  <div class="panel panel-success pt-4">
+                    <h3 class="text-center mb-20">Titre du geste</h3>
+                    <div class="geste">
+                      <div class="geste-item p-3"><a class="geste-img" href="#" data-toggle="modal" data-target="#chooseSlideModal"><img class="img-responsive" src="assets/img/global/slider-01.png"/></a>
+                        <div class="geste-descr clearfix">
+                          <div class="geste-status pull-left"><span class="active">
+                              <div class="fa fa-trash"></div></span><span class="active">
+                              <div class="fa fa-trash"></div></span><span>
+                              <div class="fa fa-trash"></div></span></div>
+                          <div class="pull-right">
+                            <div class="btn btn-rounded bg-success">
+                              <div class="fa fa-check"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="panel panel-success pt-4">
+                    <h3 class="text-center mb-20">Titre du geste</h3>
+                    <div class="geste">
+                      <div class="geste-item p-3"><a class="geste-img" href="#" data-toggle="modal" data-target="#chooseSlideModal"><img class="img-responsive" src="assets/img/global/slider-01.png"/></a>
+                        <div class="geste-descr clearfix">
+                          <div class="geste-status pull-left"><span class="active">
+                              <div class="fa fa-trash"></div></span><span class="active">
+                              <div class="fa fa-trash"></div></span><span>
+                              <div class="fa fa-trash"></div></span></div>
+                          <div class="pull-right">
+                            <div class="btn btn-rounded bg-success">
+                              <div class="fa fa-check"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="panel panel-success pt-4">
+                    <h3 class="text-center mb-20">Titre du geste</h3>
+                    <div class="geste">
+                      <div class="geste-item p-3"><a class="geste-img" href="#" data-toggle="modal" data-target="#chooseSlideModal"><img class="img-responsive" src="assets/img/global/slider-01.png"/></a>
+                        <div class="geste-descr clearfix">
+                          <div class="geste-status pull-left"><span class="active">
+                              <div class="fa fa-trash"></div></span><span class="active">
+                              <div class="fa fa-trash"></div></span><span>
+                              <div class="fa fa-trash"></div></span></div>
+                          <div class="pull-right">
+                            <div class="btn btn-rounded bg-success">
+                              <div class="fa fa-check"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <div class="panel panel-success pt-4">
+                    <h3 class="text-center mb-20">Titre du geste</h3>
+                    <div class="geste">
+                      <div class="geste-item p-3"><a class="geste-img" href="#" data-toggle="modal" data-target="#chooseSlideModal"><img class="img-responsive" src="assets/img/global/slider-01.png"/></a>
+                        <div class="geste-descr clearfix">
+                          <div class="geste-status pull-left"><span class="active">
+                              <div class="fa fa-trash"></div></span><span class="active">
+                              <div class="fa fa-trash"></div></span><span>
+                              <div class="fa fa-trash"></div></span></div>
+                          <div class="pull-right">
+                            <div class="btn btn-rounded bg-success">
+                              <div class="fa fa-check"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--chooseSlideModal-->
+              <div class="modal" id="chooseSlideModal">
+                <div class="modal-header pb-0">
+                  <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-dialog">
+                  <div class="row mb-20">
+                    <div class="col-md-6 col-md-offset-3">
+                      <div class="panel panel-default pt-4">
+                        <h3 class="text-center mb-20">Titre du geste</h3>
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-xs-8 col-md-offset-2">
+                              <div class="pull-left">
+                                <div class="btn btn-rounded bg-pink">
+                                  <div class="fa fa-thumbs-o-down"></div>
+                                </div>
+                                <div class="d-block text-uppercase">do not</div>
+                              </div>
+                              <div class="pull-right">
+                                <div class="btn btn-rounded bg-success">
+                                  <div class="fa fa-thumbs-o-up"></div>
+                                </div>
+                                <div class="d-block text-uppercase">do it</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
