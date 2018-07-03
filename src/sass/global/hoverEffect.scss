@@ -1,0 +1,11 @@
+.hoverEffect{
+	&:hover,
+	&:focus{
+		border-radius: 5px;
+		overflow: hidden;
+		cursor: pointer;
+		position: relative;
+		z-index: 10000;
+		box-shadow: 0 5px 25px 1px rgba(0, 0, 0, 0.4);
+	}
+}

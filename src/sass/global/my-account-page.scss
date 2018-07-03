@@ -78,14 +78,20 @@
 }
 .my-account-avatars{
 	display: block;
-	max-width: 400px;
+	max-width: 300px;
+	overflow: hidden;
 	&-title{
 		display: inline-block;
 		float: left;
 		color: $black;
-		padding: 7px;
+		padding: 6px;
 		vertical-align: middle;
-		border: 2px solid $white;
+		border-top-width: 2.5px;
+		border-right-width: 1px;
+		border-left-width: 1px;
+		border-bottom-width: 2.5px;
+		border-style: solid;
+		border-color: $white;
 		background: $gray;
 	}
 	&-list{

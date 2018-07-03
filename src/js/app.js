@@ -3,6 +3,7 @@ var slick = require('slick-carousel');
 var selectpicker = require('bootstrap-select');
 var datetimepicker = require('eonasdan-bootstrap-datetimepicker');
 var Chart = require('chart.js');
+var tooltipster = require('tooltipster');
 
 $(document).ready(function(){
     $('.big-trees-item.rating').click(function(){
@@ -87,5 +88,25 @@ $(document).ready(function(){
                 position: 'left'
             }
         }
+    });
+    var bd = $('<div class="modal-backdrop in"></div>');
+    var hoverEffect = function () {
+        bd.appendTo(document.body);
+    };
+    $(".hoverEffect").hover( function () {
+        console.log('hover');
+        bd.appendTo(document.body);
+    });
+    $('.hoverEffect').on("mouseleave", function () {
+        bd.remove();
+    });
+    $(".hoverEffect").tooltipster({
+        delay: 300,
+        side: 'top',
+        multiple: true,
+        touchDevices: true,
+        theme: 'tooltipster-shadow',
+        autoClose: true,
+        trigger: 'hover'
     });
 });
