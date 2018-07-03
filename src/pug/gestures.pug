@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.panel-list
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left L'outil presque ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row.mb-20
+								.col-xs-12
+									.bg-gray-light.w-100.py-2.clearfix
+										.col-xs-6
+											a(href="#").my-account-avatars.clearfix
+												.my-account-avatars-title My account
+												ul.my-account-avatars-list
+													li.my-account-avatars-father
+														img(src="assets/img/myaccount/man.svg")
+													li.my-account-avatars-mother
+														img(src="assets/img/myaccount/woman.svg")
+													li.my-account-avatars-boy1
+														img(src="assets/img/myaccount/boy2.svg")
+													li.my-account-avatars-boy2
+														img(src="assets/img/myaccount/boy.svg")
+													li.my-account-avatars-douther
+														img(src="assets/img/myaccount/girl.svg")
+										.col-xs-6
+											a.d-inline-block.btn.btn-success.float-right(href="index.html", role="button")
+												span Retour
+											a.d-inline-block.float-right.mr-3(href="#", role="button")
+												.account-trophi
+													span 3
+													img(src="assets/img/global/cup.svg")
+							.row.mb-20
+								.col-xs-6
+									a.btn.btn-default.bg-gray-light
+										| Gestes and actions
+										img(src="assets/img/global/bullseye.svg").ml-3
+							.row.mb-20
+								.col-xs-12
+									.panel.panel-success.pt-4
+										h3.text-center.mb-20 Titre du geste
+										.geste-slider
+											.geste-slider-item
+												a(href="#" , data-toggle="collapse", data-target="#chooseSlideModal").geste-slider-img
+													img.img-responsive(src="assets/img/global/slider-01.png")
+												.geste-slider-descr.clearfix
+													.geste-slider-status.pull-left
+														span.active
+															.fa.fa-trash
+														span.active
+															.fa.fa-trash
+														span
+															.fa.fa-trash
+													.pull-right
+														.btn.btn-rounded.bg-success
+															.fa.fa-check
+											.geste-slider-item
+												a(href="#" , data-toggle="collapse", data-target="#chooseSlideModal").geste-slider-img
+													img.img-responsive(src="assets/img/global/slider-01.png")
+												.geste-slider-descr.clearfix
+													.geste-slider-status.pull-left
+														span.active
+															.fa.fa-trash
+														span.active
+															.fa.fa-trash
+														span
+															.fa.fa-trash
+													.pull-right
+														.btn.btn-rounded.bg-success
+															.fa.fa-check
+											.geste-slider-item
+												a(href="#" , data-toggle="collapse", data-target="#chooseSlideModal").geste-slider-img
+													img.img-responsive(src="assets/img/global/slider-01.png")
+												.geste-slider-descr.clearfix
+													.geste-slider-status.pull-left
+														span.active
+															.fa.fa-trash
+														span.active
+															.fa.fa-trash
+														span
+															.fa.fa-trash
+													.pull-right
+														.btn.btn-rounded.bg-success
+															.fa.fa-check
+											.geste-slider-item
+												a(href="#" , data-toggle="collapse", data-target="#chooseSlideModal").geste-slider-img
+													img.img-responsive(src="assets/img/global/slider-01.png")
+												.geste-slider-descr.clearfix
+													.geste-slider-status.pull-left
+														span.active
+															.fa.fa-trash
+														span.active
+															.fa.fa-trash
+														span
+															.fa.fa-trash
+													.pull-right
+														.btn.btn-rounded.bg-success
+															.fa.fa-check
+											.geste-slider-item
+												a(href="#" , data-toggle="collapse", data-target="#chooseSlideModal").geste-slider-img
+													img.img-responsive(src="assets/img/global/slider-01.png")
+												.geste-slider-descr.clearfix
+													.geste-slider-status.pull-left
+														span.active
+															.fa.fa-trash
+														span.active
+															.fa.fa-trash
+														span
+															.fa.fa-trash
+													.pull-right
+														.btn.btn-rounded.bg-success
+															.fa.fa-check
+							//chooseSlideModal
+							#chooseSlideModal.collapse
+								.row.mb-20
+									.col-md-4.col-md-offset-4
+										.panel.panel-default.pt-4
+											h3.text-center.mb-20 Titre du geste
+											.panel-body
+												.row
+													.col-xs-8.col-md-offset-2
+														.pull-left
+															.btn.btn-rounded.bg-pink
+																.fa.fa-thumbs-o-down
+															.d-block.text-uppercase do not
+														.pull-right
+															.btn.btn-rounded.bg-success
+																.fa.fa-thumbs-o-up
+															.d-block.text-uppercase do it
+
+
+
+
+
+
+
+
+
+
+
+
