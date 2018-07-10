@@ -472,3 +472,12 @@ button.close{
 	justify-content: center;
 	align-items: center;
 }
+.btn-slide{
+	display: inline-block;
+	&-prev{
+		float: left;
+	}
+	&-next{
+		float: right;
+	}
+}

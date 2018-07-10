@@ -37,10 +37,15 @@ $(document).ready(function() {
         $('.progress-bar').eq(currentSlide - 1).animate({
             width: '100%'
         }, animationTime);
+        $('#previous-slide').show();
     }
 
     function goToPreviousSlide() {
-        if (currentSlide <= 0) return;
+        if (currentSlide <= 1) {
+            $('#previous-slide').hide();
+        }
+        if (currentSlide <= 0)return;
+
         var windowWidth = $(window).width();
         currentSlide--;
         $slideContainer.animate({
@@ -67,11 +72,12 @@ $(document).ready(function() {
         for (var i = 0; i < currentSlide; i++) {
             $indicator.eq(i).addClass('complete');
         }
-    }
 
+    }
+    $('#previous-slide').hide();
     setSlideDimensions();
     generatePagination();
     $(window).resize(postitionSlides);
     $('.next').on('click', goToNextSlide);
     $('.previous').on('click', goToPreviousSlide);
-})
+});
