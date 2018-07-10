@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+html(lang="en")
+	include global/head
+	+head(
+		'ZD - create - persone'
+	)
+	include mixin/all-mixin
+	body.homepage
+		.wrapper
+			section.main
+				.container.py-3
+					article.panel-list
+						.container-fluid
+							.row.mb-20
+								.col-xs-12
+									nav(aria-label='breadcrumb').bread
+										ol.breadcrumb.mb-0
+											li.breadcrumb-item
+												a(href='#') Acceuil
+											li.breadcrumb-item
+												a(href='#') Initiatives sur Tournai
+											li.breadcrumb-item.active(aria-current='page') L'agenda des initiatives dans votre commune
+							.row.mb-20
+								.col-xs-12
+									.bg-warning.clearfix.py-2.px-3
+										h4.d-inline-block.text-white.float-left Tool waste reducing ZD
+										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
+											span Acceuil
+							.row
+								.col-xs-12
+									.pagination-container.full-width-container
+										.sized-container
+											.pagination
+
+									.viewport.full-width-container
+										ul.slide-container
+											li.slide(data-tag='Step 1')
+												.sized-container
+													.row
+														h3.mb-3 Combien d’adultes etes-vous a la maison?
+														include global/count-persons
+													.row.mb-20
+														h3.mb-3 Combien d’enfants avez-vous a la maison?
+														include global/count-childs
+											li.slide(data-tag='Step 2')
+												.sized-container
+													h1 Tell us about your area of expertise.
+													h2 Information about this section.
+											li.slide(data-tag='Step 3')
+												.sized-container
+													h1 Lets get a little more in depth.
+													h2 Information about this section.
+											li.slide(data-tag='Step 4')
+												.sized-container
+													h1 Tell us about where you've worked before.
+													h2 Information about this section.
+											li.slide(data-tag='Step 5')
+												.sized-container
+													h1 Describe your formal education.
+													h2 Information about this section.
+											li.slide(data-tag='Step 6')
+												.sized-container
+													h1 Mention any additional comments.
+													h2 Information about this section.
+											li.slide(data-tag='Step 7')
+												.sized-container
+													h1 Confirm your application.
+													h2 Information about this section.
+
+									.full-width-container
+										.button-container.sized-container.mx-auto
+											.d-inline-block
+												.btn-warning.btn3d.previous
+													i.fa.fa-chevron-left
+													span previous
+											.d-inline-block
+												.btn-primary.btn3d.next
+													span next
+													i.fa.fa-chevron-right
+

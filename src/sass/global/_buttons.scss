@@ -227,6 +227,7 @@
 	&:hover{
 		text-decoration: none;
 		text-align: left;
+		cursor: pointer;
 		span{
 			left: 40%;
 		}
@@ -236,6 +237,20 @@
 		.fa{
 			opacity: 1;
 			right: 20px;
+		}
+	}
+	&.previous{
+		.fa{
+			left: 10px;
+			right: auto;
+		}
+		&:hover {
+			.fa {
+				left: 20px;
+			}
+			span{
+				left: 60%;
+			}
 		}
 	}
 }
