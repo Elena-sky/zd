@@ -37,12 +37,12 @@ $(document).ready(function() {
         $('.progress-bar').eq(currentSlide - 1).animate({
             width: '100%'
         }, animationTime);
-        $('#previous-slide').show();
+        $('.previous-slide').show();
     }
 
     function goToPreviousSlide() {
         if (currentSlide <= 1) {
-            $('#previous-slide').hide();
+            $('.previous-slide').hide();
         }
         if (currentSlide <= 0)return;
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
         }
 
     }
-    $('#previous-slide').hide();
+    $('.previous-slide').hide();
     setSlideDimensions();
     generatePagination();
     $(window).resize(postitionSlides);
