@@ -28,9 +28,37 @@ html(lang="en")
 											span Acceuil
 							.row
 								.col-xs-12
-									.progress-block
-										.progress-circle.progress-80
-											span 85
+									.pagination-container.full-width-container
+										.sized-container
+											.pagination
+												.indicator.complete
+													.tag Step 1
+												.progress-bar-container
+													.progress-bar(style='width: 100%;')
+												.indicator.complete
+													.tag Step 2
+												.progress-bar-container
+													.progress-bar(style='width: 100%;')
+												.indicator.active
+													.tag Step 3
+												.progress-bar-container
+													.progress-bar(style='width: 0%;')
+												.indicator
+													.tag Step 4
+												.progress-bar-container
+													.progress-bar(style='width: 0%;')
+												.indicator
+													.tag Step 5
+												.progress-bar-container
+													.progress-bar(style='width: 0%;')
+												.indicator
+													.tag Step 6
+												.progress-bar-container
+													.progress-bar(style='width: 0%;')
+												.indicator
+													.tag Step 7
+												.progress-bar-container
+													.progress-bar(style='width: 0%;')
 							.row.mx-0.mb-20
 								.col-xs-12.px-1
 									section.widget.widget_blog_subscription
@@ -39,8 +67,13 @@ html(lang="en")
 											p
 												input#subscribe-field(type='text', name='email', style='width: 95%; padding: 1px ' +
 												'2px', placeholder='7500, Tournai', value='')
-											p.text-center
-												a(href="#").create-btn__next-step.btn-success Suivant
-
+							.row
+								.col-sm-6.col-sm-offset-3.text-center
+									a.btn-warning.btn3d.previous(href="create-persone-2.html")
+										i.fa.fa-chevron-left
+										span previous
+									a.btn-primary.btn3d(href="create-persone-4.html")
+										span next
+										i.fa.fa-chevron-right
 
 

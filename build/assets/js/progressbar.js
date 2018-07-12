@@ -74,7 +74,7 @@ $(document).ready(function() {
         }
 
     }
-    $('.previous-slide').hide();
+    //$('.previous-slide').hide();
     setSlideDimensions();
     generatePagination();
     $(window).resize(postitionSlides);
