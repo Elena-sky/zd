@@ -71,8 +71,13 @@ html(lang="en")
 																i.fa.fa-chevron-right
 											li.slide(data-tag='Step 3')
 												.sized-container
-													h1 Lets get a little more in depth.
-													h2 Information about this section.
+													.row
+														.col-xs-12.px-1
+															section.widget.widget_blog_subscription
+																form#subscribe-blog(action='#', method='post', accept-charset='utf-8')
+																	p Quelle est votre code postal?
+																	p
+																		input#subscribe-field(type='text', name='email', style='width: 95%; padding: 1px 2px', placeholder='7500, Tournai', value='')
 													.row
 														.col-sm-6.col-sm-offset-3.text-center
 															.previous-slide.btn-warning.btn3d.previous

@@ -28,25 +28,48 @@ html(lang="en")
 											span Acceuil
 							.row
 								.col-xs-12
-									.progress-block
-										.progress-circle.progress-30
-											span 30
+									.pagination-container.full-width-container
+										.sized-container
+											.pagination
+												.indicator.active
+													.tag Step 1
+												.progress-bar-container
+													.progress-bar(style='width: 0%;')
+												.indicator
+													.tag Step 2
+												.progress-bar-container
+													.progress-bar
+												.indicator
+													.tag Step 3
+												.progress-bar-container
+													.progress-bar
+												.indicator
+													.tag Step 4
+												.progress-bar-container
+													.progress-bar
+												.indicator
+													.tag Step 5
+												.progress-bar-container
+													.progress-bar
+												.indicator
+													.tag Step 6
+												.progress-bar-container
+													.progress-bar
+												.indicator
+													.tag Step 7
+												.progress-bar-container
+													.progress-bar
 							.row
-								.col-xs-8
-									h3.mb-3 Combien d’adultes etes-vous a la maison?
-								.col-xs-12
-
-									include global/count-persons
-							.row.mb-20
-								.col-xs-8
-									h3.mb-3 Combien d’enfants avez-vous a la maison?
-								.col-xs-12
-									include global/count-childs
-
+								h3.mb-3 Combien d’adultes etes-vous a la maison?
+								include global/count-persons
+							.row.mb-5
+								h3.mb-3 Combien d’enfants avez-vous a la maison?
+								include global/count-childs
 							.row
-								.text-center
-									a(href="#").create-btn__next-step Suivant
-
+								.col-sm-6.col-sm-offset-3.text-center
+									.btn-primary.btn3d.next
+										span next
+										i.fa.fa-chevron-right
 
 
 		// Login modal
