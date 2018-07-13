@@ -1,4 +1,7 @@
 .my-account{
+	.panel{
+		overflow: inherit;
+	}
 	.nav.nav-tabs{
 		border-bottom: transparent;
 		.my-account-link{
@@ -75,6 +78,9 @@
 			font-size: 2rem;
 		}
 	}
+	.bootstrap-select.dropdown-toggle:focus{
+		outline: none;
+	}
 }
 .my-account-avatars{
 	display: block;
@@ -92,7 +98,7 @@
 		border-bottom-width: 2.5px;
 		border-style: solid;
 		border-color: $white;
-		background: $gray;
+		//background: $gray;
 	}
 	&-list{
 		display: inline-block;

@@ -76,48 +76,13 @@ html(lang="en")
 														| ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes,
 														| nascetur ridiculus mus.
 
-
-
-
-		// Login modal
-		form#loginModal.modal.multi-step
-			.container
-				.modal-dialog
-					// Modal content
-					.modal-content
-						.modal-header.pb-0
-							button.close(type='button' data-dismiss='modal') &times;
-						.modal-body
 							.row
-								.col-xs-4
-									.d-block
-										img.img-responsive(src="assets/img/global/man.png")
-								.col-xs-8.pr-5
-									.welcome-modal.step.step-1.bounceInDown(data-step='1')
-										h3.welcome-modal--title Welcome & Congrats
-										p.welcome-modal--text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-									.welcome-modal.step.step-2.bounceInDown(data-step='2')
-										p.welcome-modal--text Nice to meet you! My name is SMOGEY, and I’m really happy that you’re here.
-										p.welcome-modal--text During the following months I’ll be here to help you in the waste reducing.
-										p.welcome-modal--text.text-bold What’s your name my friend?
-										input#welcome-user-name(type="text", placeholder="Name", name="welcome-user--name", value="",required).welcome-modal--input
-									.welcome-modal.step.step-3.bounceInDown(data-step='3')
-										h3.welcome-modal--title 3
-										p.welcome-modal--text 3 text
-								.col-xs-12
-									button(type='button', data-step="1", onclick="sendEvent('#loginModal', 2)").welcome-modal--next.step.step-1
-										i.fa.fa-arrow-right
-									button(type='button', data-step="2", onclick="sendEvent('#loginModal', 3)").welcome-modal--next.step.step-2
-										i.fa.fa-arrow-right
-									button(type='button', data-step="3", onclick="sendEvent('#loginModal', 4)").welcome-modal--next.step.step-3
-										i.fa.fa-arrow-right
-
-	script(src="assets/js/multi-step-modal.js")
-	script.
-		sendEvent = function (sel, step) {
-			$(sel).trigger('next.m.' + step);
-		}
-
-
+								.col-sm-6.col-sm-offset-3.text-center
+									a.btn-warning.btn3d.previous(href="create-persone-3.html")
+										i.fa.fa-chevron-left
+										span previous
+									a.btn-primary.btn3d(href="#")
+										span next
+										i.fa.fa-chevron-right
 
 

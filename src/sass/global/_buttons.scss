@@ -96,14 +96,14 @@
 			cursor: pointer;
 			color: $white;
 
-			.fa{
-				transition: all 1s ease-out;
-				-webkit-transform: rotateZ(-720deg);
-				-moz-transform: rotateZ(-720deg);
-				transform: rotateZ(-720deg);
-				animation-duration: 1s;
-				animation-name: slideOut;
-			}
+			//.fa{
+				//transition: all 1s ease-out;
+				//-webkit-transform: rotateZ(-720deg);
+				//-moz-transform: rotateZ(-720deg);
+				//transform: rotateZ(-720deg);
+				//animation-duration: 1s;
+				////animation-name: slideOut;
+			//}
 
 		}
 	}
