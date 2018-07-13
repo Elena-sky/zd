@@ -31,11 +31,19 @@
 			left: 5.5%;
 			top: 71%;
 			transform: rotate(-12deg);
+			&:focus,
+			&:active{
+				top: 71.5%;
+			}
 		}
 		&-right{
 			right: 3.7%;
 			top: 56%;
 			transform: rotate(12deg);
+			&:focus,
+			&:active{
+				top: 56.5%;
+			}
 		}
 
 		.fa{

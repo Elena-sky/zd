@@ -1,3 +1,49 @@
 @mixin bottom-border($color){
 	box-shadow: 0 4px 0 0 darken($color, 10%), 0 4px 8px 1px rgba(0, 0, 0, .2);
 }
+@mixin panel-hover($color){
+	&:before,
+	&:after {
+		// Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+		border: 1px solid transparent;
+		width: 0;
+		height: 0;
+		display: block;
+		content: "";
+		position: absolute;
+		border-radius: 5px;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	// Set up base styles, we're going to scale instead of animating width/height
+	&::before,
+	&::after {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transform-origin: center; // Ensure scaling is done from the center (expands outwards)
+	}
+
+	// scale3d(<scale-horizontal>, <scale-vertical>, <scale-depth>);
+	&::before {
+		border-top: 2px solid $color;
+		border-bottom: 2px solid $color;
+		transform: scale3d(0,1,1); // Shrink only width
+	}
+
+	&::after {
+		border-left: 2px solid $color;
+		border-right: 2px solid $color;
+		transform: scale3d(1,0,1); // Shrink only height
+	}
+
+	&:hover::before,
+	&:hover::after {
+		transform: scale3d(1,1,1); // Show full-size
+		transition: transform 0.5s;
+	}
+}

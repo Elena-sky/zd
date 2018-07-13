@@ -21,7 +21,6 @@
 .panel{
 	position: relative;
 	border-radius: 5px;
-	border: 0;
 	background-color: $gray;
 	min-height: 280px;
 	overflow: hidden;
@@ -67,21 +66,39 @@
 	}
 	&-primary{
 		@include bottom-border ($primary);
+		transition: color 0.25s;
+		border: none;
+		@include panel-hover($primary);
 	}
 	&-success{
 		@include bottom-border ($success);
+		transition: color 0.25s;
+		border: none;
+		@include panel-hover($success);
 	}
 	&-pink{
 		@include bottom-border ($pink);
+		transition: color 0.25s;
+		border: none;
+		@include panel-hover($pink);
 	}
 	&-danger{
 		@include bottom-border ($danger);
+		transition: color 0.25s;
+		border: none;
+		@include panel-hover($danger);
 	}
 	&-warning{
 		@include bottom-border ($warning);
+		transition: color 0.25s;
+		border: none;
+		@include panel-hover($warning);
 	}
 	&-default{
 		@include bottom-border ($default);
+		transition: color 0.25s;
+		border: none;
+		@include panel-hover($default);
 	}
 	&-bg-waste{
 		position: absolute;
