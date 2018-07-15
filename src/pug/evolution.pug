@@ -64,7 +64,7 @@ html(lang="en")
 
 							.row.mx-0
 								.col-xs-12.px-1
-									.panel.panel-warning.pt-4
+									.panel.panel-warning.bg-white.p-3
 										.row
 											.col-sm-1
 												#legend
@@ -75,6 +75,8 @@ html(lang="en")
 													a.btn.btn-success#a3(href="#")
 														i.fa.fa-trash
 													a.btn.btn-primary#a4(href="#")
+														i.fa.fa-trash
+													a.btn.bg-gray-dark#a5(href="#")
 														i.fa.fa-trash
 											.col-sm-11
 												.chart-container#container
@@ -96,11 +98,15 @@ html(lang="en")
 			$('.highcharts-legend-item:nth-child(4)').click();
 			$(this).toggleClass("leg-clicked");
 		});
+		$("#a5").click(function () {
+			$('.highcharts-legend-item:nth-child(5)').click();
+			$(this).toggleClass("leg-clicked");
+		});
 
 		$('#container').highcharts({
 			chart: {
 				backgroundColor: '#fff',
-				type: 'area'
+				type: 'line'
 			},
 			title: {
 				text: '' //' title'
@@ -124,16 +130,17 @@ html(lang="en")
 				text: ''
 			},
 			xAxis: {
-				allowDecimals: false,
+				allowDecimals: true,
 				//labels: {
 				//	formatter: function () {
 				//		return 'Week ' + this.value; // clean, unformatted number for year
 				//	}
 				//}
-				type: 'datetime',
-				labels: {
-					format: '{value: %e. %b}'
-				},
+				//type: 'datetime',
+				//labels: {
+				//	format: '{value: %b}'
+				//}
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 			},
 			yAxis: {
 				title: {
@@ -145,7 +152,7 @@ html(lang="en")
 					}
 				},
 
-				gridLineWidth: 0,
+				gridLineWidth: 1,
 				minorGridLineWidth: 0
 			},
 			tooltip: {
@@ -153,7 +160,7 @@ html(lang="en")
 			},
 			plotOptions: {
 				area: {
-					pointStart: 2,
+					//pointStart: 2,
 					marker: {
 						enabled: true,
 						symbol: 'circle',
@@ -166,7 +173,7 @@ html(lang="en")
 					}
 				}
 			},
-			series: [{
+			series: [	{
 				name: 'yellow',
 				data: [22,40,38, 53, 34, 25],
 				color: '#fdb32a'
@@ -182,6 +189,10 @@ html(lang="en")
 				name: 'blue',
 				data: [12, 28, 31, 69, 12, 54],
 				color: '#11C5E7'
+			},	{
+				name: 'dark',
+				data: [55, 25, 35, 15, 54, 50],
+				color: 'rgba(73, 80, 86, 0.47)'
 			}
 			]
 		});
