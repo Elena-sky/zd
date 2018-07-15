@@ -1,52 +1,70 @@
+var speedCanvas = document.getElementById("chart");
 
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
 
-    // Define data set for all charts
-    var dataBaby = [1, 10, 5, 2, 20, 30, 45];
-    var moreDataBaby = [20, 30, 15, 12, 21, 30, 40];
-    myData = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [
-            {
-                label: "Data, baby!",
-                fill: false,
-                backgroundColor: "rgb(190, 99, 255, 0.25)",
-                borderColor: "rgb(190, 99, 255)",
-                data: dataBaby
-            },
-            {
-                label: "More data, baby!",
-                fill: true,
-                backgroundColor: "rgba(255, 99, 132, 0.25)",
-                borderColor: "rgb(255, 99, 132)",
-                data: moreDataBaby
+function hoursEarlier(hours) {
+    return moment().subtract(hours, 'h').toDate();
+};
+
+var speedData = {
+    labels: [hoursEarlier(10), hoursEarlier(9.4), hoursEarlier(8), hoursEarlier(7), hoursEarlier(6), hoursEarlier(5), hoursEarlier(4)],
+    datasets: [{
+        label: "Car Speed",
+        data: [0, 59, 75, 20, 20, 55, 40],
+        lineTension: 0.25,
+        fill: false,
+        borderColor: 'orange',
+        backgroundColor: 'transparent',
+        pointBorderColor: 'orange',
+        pointBackgroundColor: 'rgba(255,150,0,0.5)',
+        borderDash: [5, 5],
+        pointRadius: 5,
+        pointHoverRadius: 10,
+        pointHitRadius: 30,
+        pointBorderWidth: 2,
+        pointStyle: 'rectRounded'
+    }]
+};
+
+var chartOptions = {
+    legend: {
+        display: true,
+        position: 'top',
+        labels: {
+            boxWidth: 80,
+            fontColor: 'black'
+        }
+    },
+    scales: {
+        xAxes: [{
+            type: "time",
+            time: {
+                unit: 'hour',
+                unitStepSize: 0.5,
+                round: 'hour',
+                tooltipFormat: "h:mm:ss a",
+                displayFormats: {
+                    hour: 'MMM D, h:mm A'
+                }
             }
-        ]
-    };
-    
-    // Default chart defined with type: 'line'
-    Chart.defaults.global.defaultFontFamily = "monospace";
-    var ctx = document.getElementById("myChart").getContext("2d");
-    var myChart = new Chart(ctx, {
-        type: "line",
-        data: myData
-    });
-    
-    // Function runs on chart type select update
-    function updateChartType() {
-        // Since you can't update chart type directly in Charts JS you must destroy original chart and rebuild
-        myChart.destroy();
-        myChart = new Chart(ctx, {
-            type: document.getElementById("chartType").value,
-            data: myData
-        });
+        }],
+        yAxes: [{
+            gridLines: {
+                color: "black",
+                borderDash: [2, 5],
+            },
+            scaleLabel: {
+                display: true,
+                labelString: "Speed in Miles per Hour",
+                fontColor: "green"
+            }
+        }]
     }
-    
-    // Randomize data button function
-    function randomizeData() {
-        var newDataBaby = dataBaby.map(x => Math.floor(Math.random() * 50));
-        var newMoreDataBaby = moreDataBaby.map(x => Math.floor(Math.random() * 40));
-        myData.datasets[0].data = newDataBaby;
-        myData.datasets[1].data = newMoreDataBaby;
-        myChart.update();
-        console.log(newDataBaby);
-    }
+};
+
+var lineChart = new Chart(speedCanvas, {
+    type: 'line',
+    data: speedData,
+    options: chartOptions
+});

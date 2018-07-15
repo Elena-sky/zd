@@ -65,10 +65,129 @@ html(lang="en")
 							.row.mx-0
 								.col-xs-12.px-1
 									.panel.panel-warning.pt-4
-										.panel-header.py-0
-										.panel-body
-											.chart-container
-												canvas#myChart
+										.row
+											.col-sm-1
+												#legend
+													a.btn.btn-warning#a1(href="#")
+														i.fa.fa-trash
+													a.btn.btn-pink#a2(href="#")
+														i.fa.fa-trash
+													a.btn.btn-success#a3(href="#")
+														i.fa.fa-trash
+													a.btn.btn-primary#a4(href="#")
+														i.fa.fa-trash
+											.col-sm-11
+												.chart-container#container
+
+	script.
+		$("#a1").click(function () {
+			$('.highcharts-legend-item:nth-child(1)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a2").click(function () {
+			$('.highcharts-legend-item:nth-child(2)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a3").click(function () {
+			$('.highcharts-legend-item:nth-child(3)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a4").click(function () {
+			$('.highcharts-legend-item:nth-child(4)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+
+		$('#container').highcharts({
+			chart: {
+				backgroundColor: '#fff',
+				type: 'area'
+			},
+			title: {
+				text: '' //' title'
+			},
+			legend: {
+				align: 'center',
+				x: 0,
+				y: 10,
+				backgroundColor: '#272D31',
+				color: '#fff',
+				layout: 'horizontal',
+				floating: true,
+				verticalAlign: 'top',
+				shadow: false,
+				border: 0,
+				borderRadius: 0,
+				borderWidth: 0
+			},
+
+			subtitle: {
+				text: ''
+			},
+			xAxis: {
+				allowDecimals: false,
+				//labels: {
+				//	formatter: function () {
+				//		return 'Week ' + this.value; // clean, unformatted number for year
+				//	}
+				//}
+				type: 'datetime',
+				labels: {
+					format: '{value: %e. %b}'
+				},
+			},
+			yAxis: {
+				title: {
+					text: ''
+				},
+				labels: {
+					formatter: function () {
+						return this.value / 1 + 'kg';
+					}
+				},
+
+				gridLineWidth: 0,
+				minorGridLineWidth: 0
+			},
+			tooltip: {
+				pointFormat: '{series.name} <p class="text-center">{point.y:,.0f} kg</p>'
+			},
+			plotOptions: {
+				area: {
+					pointStart: 2,
+					marker: {
+						enabled: true,
+						symbol: 'circle',
+						radius: 5,
+						states: {
+							hover: {
+								enabled: true
+							}
+						}
+					}
+				}
+			},
+			series: [{
+				name: 'yellow',
+				data: [22,40,38, 53, 34, 25],
+				color: '#fdb32a'
+			}, {
+				name: 'pink',
+				data: [16,23,39, 62, 44, 9],
+				color: '#DA2A87'
+			}, {
+				name: 'green',
+				data: [8,33,22, 56, 56, 18],
+				color: '#93BF4C'
+			}, {
+				name: 'blue',
+				data: [12, 28, 31, 69, 12, 54],
+				color: '#11C5E7'
+			}
+			]
+		});
+
+
+
 
 
 

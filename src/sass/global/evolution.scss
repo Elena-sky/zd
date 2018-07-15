@@ -38,5 +38,31 @@
 			}
 		}
 	}
-
 }
+#legend a {
+	float: left;
+	display: block;
+	margin: 5px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	padding: 0 10px;
+	.fa{
+		font-size: 30px;
+		line-height: 40px;
+		vertical-align: middle;
+	}
+}
+.leg-clicked {
+	color: #CCC !important;
+}
+#legend #a1 {
+	//background: rgb(87, 188, 0);
+}
+#legend #a2 {
+	//background: rgb(213, 156, 72);
+}
+#legend #a3 {
+	//background: rgb(12, 170, 226);
+}
+.highcharts-legend{display: none;}
