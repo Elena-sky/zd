@@ -65,7 +65,7 @@ html(lang="en")
 							.row.mx-0
 								.col-xs-12.px-1
 									.panel.panel-warning.bg-white.p-3
-										.row
+										.row.pb-6
 											.col-sm-1
 												#legend
 													a.btn.btn-warning#a1(href="#")
@@ -80,6 +80,8 @@ html(lang="en")
 														i.fa.fa-trash
 											.col-sm-11
 												.chart-container#container
+												a#add-chart-data.btn.btn-success(href="#")
+													i.fa.fa-plus
 
 	script.
 		$("#a1").click(function () {
@@ -195,6 +197,15 @@ html(lang="en")
 				color: 'rgba(73, 80, 86, 0.47)'
 			}
 			]
+		});
+		$('#add-chart-data').click(function () {
+			var chart = $('#container').highcharts();
+			chart.addSeries({
+				id: 'abc',
+				name: 'new data',
+				data: [05, 21, 77, 55, 33, 44],
+				color: '#16a085'
+			});
 		});
 
 

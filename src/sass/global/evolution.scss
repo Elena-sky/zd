@@ -56,13 +56,12 @@
 .leg-clicked {
 	color: #CCC !important;
 }
-#legend #a1 {
-	//background: rgb(87, 188, 0);
-}
-#legend #a2 {
-	//background: rgb(213, 156, 72);
-}
-#legend #a3 {
-	//background: rgb(12, 170, 226);
-}
 .highcharts-legend{display: none;}
+#add-chart-data{
+	border-radius: 50%;
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	padding: 9px 13px;
+	text-align: center;
+}
