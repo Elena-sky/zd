@@ -2,27 +2,57 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	margin: 0 auto;
 	width: 100%;
+	max-width: 640px;
+	min-height: 500px;
 	position: relative;
-	img{
-		display: block;
-		margin: 0 auto;
-		width: 100%;
-		height: 100%;
-	}
+	background: url("../img/global/garden-3.png") no-repeat top center ;
+	background-size: 100%;
+	//img{
+	//	display: block;
+	//	margin: 0 auto;
+	//	width: 60%;
+	//	height: 60%;
+	//}
 	&-inner{
 		display: block;
-		width: 100%;
-		height: 100%;
+		width: 40%;
+		height: 20%;
 		position: absolute;
-		&-button-group{
-			display: block;
-			position: relative;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			padding: 5%;
+		background: $white;
+		border-radius: 10px;
+		top: 30%;
+		//&-button-group{
+		//	display: block;
+		//	position: relative;
+		//	width: 100%;
+		//	height: 100%;
+		//	overflow: hidden;
+		//	padding: 5%;
+		&:before{
+			content: "";
+			width: 10px;
+			height: 100px;
+			background: #573229;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
 		}
+	}
+	&-table-bottom{
+		content: "";
+		width: 56px;
+		height: 16px;
+		position: absolute;
+		bottom: 145px;
+		left: 50%;
+		margin-left: -20px;
+		background: url(../img/global/garden-bottom.png) no-repeat center;
+		background-size: cover;
+		animation-duration: .3s;
+		animation-delay: .6s;
 	}
 	&-btn{
 		position: absolute;
@@ -66,9 +96,14 @@
 		}
 	}
 	&-title{
+		display: block;
+		height: 100px;
 		padding: 2rem;
 		text-align: center;
 		background: rgba(white, .5);
 		border-radius: 15px;
+		-vendor-animation-duration: 3s;
+		-vendor-animation-delay: 2s;
+		-vendor-animation-iteration-count: infinite;
 	}
 }
