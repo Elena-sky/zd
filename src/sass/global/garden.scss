@@ -3,33 +3,20 @@
 	flex-direction: row;
 	justify-content: space-around;
 	margin: 0 auto;
-	width: 100%;
-	max-width: 640px;
-	min-height: 500px;
+	width: 80%;
+	height: 600px;
 	position: relative;
 	background: url("../img/global/garden-3.png") no-repeat top center ;
 	background-size: 100%;
-	//img{
-	//	display: block;
-	//	margin: 0 auto;
-	//	width: 60%;
-	//	height: 60%;
-	//}
 	&-inner{
 		display: block;
-		width: 40%;
-		height: 20%;
+		width: 200px;
+		height: 130px;
 		position: absolute;
 		background: $white;
 		border-radius: 10px;
-		top: 30%;
-		//&-button-group{
-		//	display: block;
-		//	position: relative;
-		//	width: 100%;
-		//	height: 100%;
-		//	overflow: hidden;
-		//	padding: 5%;
+		top: 40%;
+		left: 5%;
 		&:before{
 			content: "";
 			width: 10px;
@@ -46,56 +33,67 @@
 		width: 56px;
 		height: 16px;
 		position: absolute;
-		bottom: 145px;
-		left: 50%;
+		bottom: 127px;
+		left: 130px;
 		margin-left: -20px;
 		background: url(../img/global/garden-bottom.png) no-repeat center;
 		background-size: cover;
 		animation-duration: .3s;
 		animation-delay: .6s;
 	}
-	&-btn{
-		position: absolute;
-		&-left{
-			display: block;
-			left: 5.5%;
-			top: 71%;
-			transform: rotate(-12deg);
-			&:focus,
-			&:active{
-				top: 71.5%;
-			}
-		}
-		&-right{
-			right: 3.7%;
-			top: 56%;
-			transform: rotate(12deg);
-			&:focus,
-			&:active{
-				top: 56.5%;
-			}
-		}
-
-		.fa{
-			left: 0;
-			right: inherit;
-			top: 2px;
-			font-size: 43px;
-		}
-
-		&:hover,
-		&:focus{
-			.fa{
-				left: 5px;
-				right: inherit;
-			}
-			span{
-				left: 60%;
-			}
-
-		}
+	&-inner-button-group {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 2rem;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
 	}
+	//&-btn{
+	//	//position: absolute;
+	//	&-left{
+	//		display: block;
+	//		left: 5.5%;
+	//		top: 71%;
+	//		//transform: rotate(-12deg);
+	//		&:focus,
+	//		&:active{
+	//			top: 71.5%;
+	//		}
+	//	}
+	//	&-right{
+	//		right: 3.7%;
+	//		top: 56%;
+	//		//transform: rotate(12deg);
+	//		&:focus,
+	//		&:active{
+	//			top: 56.5%;
+	//		}
+	//	}
+	//
+	//.fa{
+	//	left: 0;
+	//	right: inherit;
+	//	top: 2px;
+	//	font-size: 43px;
+	//}
+
+	//	&:hover,
+	//	&:focus{
+	//		.fa{
+	//			left: 5px;
+	//			right: inherit;
+	//		}
+	//		span{
+	//			left: 60%;
+	//		}
+	//	}
+	//}
 	&-title{
+		position: absolute;
+
 		display: block;
 		height: 100px;
 		padding: 2rem;
