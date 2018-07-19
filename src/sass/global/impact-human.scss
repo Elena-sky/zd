@@ -2,7 +2,17 @@
 	display: block;
 	width: 100%;
 	overflow: hidden;
-	.btn3d {
-		min-width: 240px;
+	.btn-play{
+		margin: 3rem auto;
+		width: 100px;
+		height: 80px;
+		border-radius: 15px;
+		background: $dark;
+		text-align: center;
+		padding: 1.5rem 2rem;
+		.fa{
+			font-size: 2rem;
+			color: $white;
+		}
 	}
 }

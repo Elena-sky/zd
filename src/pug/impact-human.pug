@@ -10,7 +10,7 @@ html(lang="en")
 			section.main
 				.container.py-3
 					article.impact-human
-						.container-fluid
+						.container
 							.row.mb-20
 								.col-xs-12
 									nav(aria-label='breadcrumb').bread
@@ -60,38 +60,67 @@ html(lang="en")
 												.progress-bar-container
 													.progress-bar(style='width: 0%;')
 							.row.mx-0.mb-20
-								.col-xs-12
-									.d-block.w-80.mx-auto
-										.bubble.bubble-success.bounceInDown.animated.mb-6
-											h3 Pourquoi réduire ses déchets ?
-											.video-block.mb-5
-												iframe(type='text/html' width='520' height='400'
-												src='https://www.youtube.com/embed/D6GlJcKdwHA'
-												frameborder='0')
-											.clearfix
-												.pull-right
-													a.btn-success.btn3d(href="#")
-														i.fa.fa-check-circle
-														span Skip this video
-							.row
 								.col-xs-4
 									.d-block
 										img.img-responsive(src="assets/img/global/man-02.png")
-								.col-xs-4
-									.text-center
-										a.btn-primary.btn3d.next(href="question-step.html")
-											span Start the adventure !
-											i.fa.fa-chevron-right
+								.col-xs-8
+									.d-block.w-90.mx-auto
+										.bubble.bubble-success.bubble-left.bounceInDown.animated
+											.bubble-content
+												.row
+													.col-xs-9
+														h3 Pourquoi réduire ses déchets ?
+														p "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+
+													.col-xs-3
+														a.btn.btn-default.btn-play(data-toggle="modal" data-target="#videoModal"
+														data-theVideo="http://www.youtube.com/embed/D6GlJcKdwHA")
+															.fa.fa-play
+												//.video-block.mb-5
+												//	iframe(type='text/html' width='520' height='400'
+												//	src='https://www.youtube.com/embed/D6GlJcKdwHA'
+												//	frameborder='0')
+							.row
+								.col-sm-6.col-sm-offset-3.text-center
+									//a.btn-warning.btn3d.previous(href="#")
+									//	i.fa.fa-chevron-left
+									//	span previous
+									//a.btn-primary.btn3d(href="#")
+									//	span next
+									//	i.fa.fa-chevron-right
 
 
+	#videoModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='videoModal' aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-body
+					button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+					div
+						iframe(width='100%' height='350' src='')
+				.modal-footer
+					.row
+						.col-sm-10.col-sm-offset-1.text-center
+							a.btn-warning.btn3d.previous(href="#")
+								i.fa.fa-chevron-left
+								span previous
+							a.btn-primary.btn3d(href="#")
+								span next
+								i.fa.fa-chevron-right
 
-
-	script(src="assets/js/multi-step-modal.js")
 	script.
-		sendEvent = function (sel, step) {
-			$(sel).trigger('next.m.' + step);
+		autoPlayYouTubeModal();
+
+		//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+		function autoPlayYouTubeModal() {
+			var trigger = $("body").find('[data-toggle="modal"]');
+			trigger.click(function () {
+				var theModal = $(this).data("target"),
+					videoSRC = $(this).attr("data-theVideo"),
+					videoSRCauto = videoSRC + "?autoplay=1frameborder='0'";
+				$(theModal + ' iframe').attr('src', videoSRCauto);
+				$(theModal + ' button.close').click(function () {
+					$(theModal + ' iframe').attr('src', videoSRC,);
+				});
+			});
 		}
-
-
-
 

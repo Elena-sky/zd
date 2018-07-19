@@ -10,12 +10,12 @@
 	background-size: 100%;
 	&-inner{
 		display: block;
-		width: 200px;
+		width: 240px;
 		height: 130px;
 		position: absolute;
 		background: $white;
 		border-radius: 10px;
-		top: 40%;
+		top: 43%;
 		left: 5%;
 		&:before{
 			content: "";
@@ -33,8 +33,8 @@
 		width: 56px;
 		height: 16px;
 		position: absolute;
-		bottom: 127px;
-		left: 130px;
+		bottom: 110px;
+		left: 150px;
 		margin-left: -20px;
 		background: url(../img/global/garden-bottom.png) no-repeat center;
 		background-size: cover;
@@ -43,54 +43,52 @@
 	}
 	&-inner-button-group {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		padding: 2rem;
+		padding: 1rem 1rem 0;
 		position: relative;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
 	}
-	//&-btn{
-	//	//position: absolute;
-	//	&-left{
-	//		display: block;
-	//		left: 5.5%;
-	//		top: 71%;
-	//		//transform: rotate(-12deg);
-	//		&:focus,
-	//		&:active{
-	//			top: 71.5%;
-	//		}
-	//	}
-	//	&-right{
-	//		right: 3.7%;
-	//		top: 56%;
-	//		//transform: rotate(12deg);
-	//		&:focus,
-	//		&:active{
-	//			top: 56.5%;
-	//		}
-	//	}
-	//
-	//.fa{
-	//	left: 0;
-	//	right: inherit;
-	//	top: 2px;
-	//	font-size: 43px;
-	//}
+	&-btn{
+		//position: absolute;
+		&-left{
+			display: block;
+			//left: 5.5%;
+			//top: 71%;
+			//transform: rotate(-12deg);
+			&:focus,
+			&:active{
+				//top: 71.5%;
+			}
+		}
+		&-right{
+			//transform: rotate(12deg);
+			//&:focus,
+			//&:active{
+			//	top: 56.5%;
+			//}
+		}
 
-	//	&:hover,
-	//	&:focus{
-	//		.fa{
-	//			left: 5px;
-	//			right: inherit;
-	//		}
-	//		span{
-	//			left: 60%;
-	//		}
-	//	}
-	//}
+	.fa{
+		left: 0;
+		right: inherit;
+		top: 2px;
+		font-size: 43px;
+	}
+
+		&:hover,
+		&:focus{
+			.fa{
+				left: 5px;
+				right: inherit;
+			}
+			span{
+				left: 60%;
+			}
+		}
+	}
 	&-title{
 		position: absolute;
 
