@@ -10,7 +10,7 @@ $bubble-warning-color : $warning;
 	width: 100%;
 	min-height: 200px;
 	background-color: rgba($white , .5);
-	box-shadow: inset 0 0 40px 20px rgba(255,255,255,0.5);
+	border: 2px solid $info;
 	border-radius: 15px;
 	text-align: left;
 	padding: 1rem;
@@ -37,10 +37,10 @@ $bubble-warning-color : $warning;
 		box-shadow: none;
 		margin-bottom: 0;
 	}
-	&.bubble-right:after{
-		left: auto;
-		right: 15%;
-	}
+	//&.bubble-right:after{
+	//	left: auto;
+	//	right: 15%;
+	//}
 	&.bubble-left{
 		left: 0;
 		top: 20%;
@@ -56,30 +56,25 @@ $bubble-warning-color : $warning;
 			left: -25px;
 		}
 	}
+	&.bubble-bottom-right{
+		&:before{
+			bottom: -20px;
+			right: 15%;
+			content: "";
+			width: 60px;
+			height: 60px;
+			display: block;
+			border: 2px solid $success;
+			transform: skewY(40deg);
+			position: absolute;
+			background: $white;
+		}
+	}
 	&.bubble-success{
-		//background-color: $bubble-success-color ;
 		border: 2px solid $success;
-		//&:after{
-		//	border-top-color: rgba($bubble-success-color, .5);
-		//	border-right-color: transparent;
-		//}
-		//.bubble-right:after{
-		//	border-top-color:transparent;
-		//	border-right-color: rgba( $bubble-success-color, .5) ;
-		//}
-		//.bubble-left{
-		//	//border-right-color:transparent;
-		//	//border-top-color: rgba( $bubble-success-color, .5) ;
-		//	&:before{
-		//		width: 50px;
-		//		height: 50px;
-		//		border: 2px solid $success;
-		//		background: $white;
-		//	}
-		//}
 	}
 	&.bubble-primary{
-		background-color: $bubble-primary-color ;
+		border: $bubble-primary-color ;
 		&:after{
 			border-top-color: rgba($bubble-primary-color, .5);
 			border-right-color: transparent;
@@ -90,14 +85,8 @@ $bubble-warning-color : $warning;
 		}
 	}
 	&.bubble-info{
-		background-color: rgba($bubble-info-color, .5);
-		&:after{
-			border-top-color: rgba($bubble-info-color, .28);
-			border-right-color: transparent;
-		}
-		.bubble-right:after{
-			border-top-color:transparent;
-			border-right-color: rgba( $bubble-info-color, .28) ;
+		&.bubble-bottom-right:before{
+			border-color: $info;
 		}
 	}
 	&.bubble-danger{
