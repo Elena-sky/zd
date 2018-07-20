@@ -47,11 +47,11 @@ html(lang="en")
 													.tag Step 4
 												.progress-bar-container
 													.progress-bar(style='width: 100%;')
-												.indicator.complete
+												.indicator.active
 													.tag Step 5
 												.progress-bar-container
-													.progress-bar(style='width: 100%;')
-												.indicator.active
+													.progress-bar(style='width: 0;')
+												.indicator
 													.tag Step 6
 												.progress-bar-container
 													.progress-bar
@@ -70,12 +70,20 @@ html(lang="en")
 alt='#')
 											.col-xs-4
 												.btn-vertical-group.py-6
-													a.btn.btn-success.btn-rounded(href="#")
+													a.btn.btn-success.btn-rounded(href="conclution.html")
 														.fa.fa-check
 													p Je ne fais pas encore
-													a.btn.btn-danger.btn-rounded(href="#")
+													a.btn.btn-danger.btn-rounded(href="conclution.html")
 														.fa.fa-times
 													p Je fais déjà
+							.row
+								.col-sm-6.col-sm-offset-3.text-center
+									a.btn-warning.btn3d.previous(href="impact-human.html")
+										i.fa.fa-chevron-left
+										span previous
+									a.btn-primary.btn3d(href="conclution.html")
+										span skip
+										i.fa.fa-chevron-right
 
 
 
