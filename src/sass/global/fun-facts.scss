@@ -27,4 +27,10 @@
 		font-weight: bold;
 		color: $white;
 	}
+	&-left{
+		.fun-fact-label{
+			margin-left: 0;
+			margin-right: -30px;
+		}
+	}
 }

@@ -481,3 +481,10 @@ button.close{
 		float: right;
 	}
 }
+.btn-settings{
+	float: right;
+	.fa{
+		font-size: 3rem;
+		color: $warning;
+	}
+}

@@ -1,0 +1,23 @@
+.felicitations{
+	display: block;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	min-height: 300px;
+	max-height: 400px;
+	padding: 1rem;
+	background: linear-gradient($white 60%, $success 60%);
+	&-title{
+		text-align: center;
+		font-size: 1.6rem;
+		color: $success;
+		margin-bottom: 1rem;
+	}
+	&-img{
+		width: 30%;
+		margin: 0 auto;
+		img{
+			width: 100%;
+		}
+	}
+}

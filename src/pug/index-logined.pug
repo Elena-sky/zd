@@ -26,78 +26,124 @@ html(lang="en")
 										h4.d-inline-block.text-white.float-left L'outil presque ZD
 										a.d-inline-block.btn.btn-outline-warning.float-right(href="index.html", role="button")
 											span Acceuil
-							.row.mb-20
-								.col-xs-12
-									.bg-gray-light.w-100.py-2.clearfix
-										.col-xs-6
-											a(href="#").my-account-avatars.clearfix
-												.my-account-avatars-title My account
-												ul.my-account-avatars-list
-													li.my-account-avatars-father
-														img(src="assets/img/myaccount/man.svg")
-													li.my-account-avatars-mother
-														img(src="assets/img/myaccount/woman.svg")
-													li.my-account-avatars-boy1
-														img(src="assets/img/myaccount/boy2.svg")
-													li.my-account-avatars-boy2
-														img(src="assets/img/myaccount/boy.svg")
-													li.my-account-avatars-douther
-														img(src="assets/img/myaccount/girl.svg")
-										.col-xs-6
 
-											a.d-inline-block.btn.btn-success.float-right(href="index.html", role="button")
-												span Retour
-											a.d-inline-block.float-right.mr-3(href="#", role="button")
-												.account-trophi
-													span 3
-													img(src="assets/img/global/cup.svg")
+							//.row.mb-20
+							//	.col-xs-12
+							//		.bg-gray-light.w-100.py-2.clearfix
+							//			.col-xs-6
+							//				a(href="#").my-account-avatars.clearfix
+							//					.my-account-avatars-title My account
+							//					ul.my-account-avatars-list
+							//						li.my-account-avatars-father
+							//							img(src="assets/img/myaccount/man.svg")
+							//						li.my-account-avatars-mother
+							//							img(src="assets/img/myaccount/woman.svg")
+							//						li.my-account-avatars-boy1
+							//							img(src="assets/img/myaccount/boy2.svg")
+							//						li.my-account-avatars-boy2
+							//							img(src="assets/img/myaccount/boy.svg")
+							//						li.my-account-avatars-douther
+							//							img(src="assets/img/myaccount/girl.svg")
+							//			.col-xs-6
+							//				a.d-inline-block.btn.btn-success.float-right(href="index.html", role="button")
+							//					span Retour
+							//				a.d-inline-block.float-right.mr-3(href="#", role="button")
+							//					.account-trophi
+							//						span 3
+							//						img(src="assets/img/global/cup.svg")
 							.row.mx-0.mb-20
-								.col-xs-12
+								.col-sm-7.col-xs-12
 									.panel.panel-warning.pt-4
 										.panel-body
 											.row
-												.col-xs-8
-													.text-center.py-6
-														h1.text-bold.text-uppercase Introduisez vos données
 												.col-xs-4
 													img.img-responsive(src='assets/img/global/introduce-data.gif', alt='#')
-
-								.col-sm-6.col-xs-12
-									.panel.panel-pink.pt-4
-										.panel-header
-											.text-center.py-4
-												h1.text-bold.text-uppercase Suivez votre évolution
-										.panel-body
-											.row
 												.col-xs-8
-												.col-xs-4
-													img.img-responsive(src='assets/img/global/follow.gif', alt='#')
+													h2.text-black.text-center.mt-0 L'info du juor
+													p.text-left Le Lorem Ipsum est simplement du faux texte employé dans la composition et
+														| la mise	en page avant impression. Le Lorem Ipsum est le faux texte standard
+														| de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
+														| ensemble des morceaux de texte pour réaliser un livre spécimen de polices de
+														| texte.
+													a.btn-warning.btn3d(href="#")
+														i.fa.fa-chevron-right
+														span En savoir plus
 
-
-								.col-sm-6.col-xs-12
-									.row
-										.col-xs-12
-											.input-group.py-5.mb-5
-												input.form-control(type='text', placeholder='Chercher une information, un conseil, …')
-												span.input-group-btn
-													button.btn.btn-default(type='button')
-														i.fa.fa-search
+								.col-sm-5.col-xs-12.oneHeight
+									.row.mb-5
+										a(href="#").btn-settings
+											.fa.fa-cog
 									.row.mb-20
-										.col-xs-6
+										.col-xs-9.mb-20
 											.fun-fact
 												.fun-fact-img
 													img(src="assets/img/global/trash.svg")
 												.fun-fact-label.bg-warning
 													span + 12 %
-										.col-xs-6
-											.fun-fact
-												.fun-fact-img
-													img(src="assets/img/global/weight.svg")
+										.col-xs-9
+											.fun-fact.fun-fact-left
 												.fun-fact-label.bg-success
 													span - 9 kg
+												.fun-fact-img
+													img(src="assets/img/global/weight.svg")
+							.row.pb-6.mb-20
+								.col-sm-1
+									#legend
+										a.btn.btn-warning#a1(href="#")
+											i.fa.fa-trash
+										a.btn.btn-pink#a2(href="#")
+											i.fa.fa-trash
+										a.btn.btn-success#a3(href="#")
+											i.fa.fa-trash
+										a.btn.btn-primary#a4(href="#")
+											i.fa.fa-trash
+										a.btn.bg-gray-dark#a5(href="#")
+											i.fa.fa-trash
+								.col-sm-11
+									.chart-container#container
+									a#add-chart-data.btn.btn-success(href="#")
+										i.fa.fa-plus
 
+							.row.mb-20
+								.col-xs-12
+									.panel.panel-warning.p-3
+										.row.my-account
+											.col-xs-7
+												ul.users-list.clearfix
+													li.user-list__item
+														.user-list__item-img
+															img(src="assets/img/global/father.svg")
+														.user-list__item-name Martin Davos
+														.user-list__item-type
+															select.selectpicker.show-tick(data-width="fit", data-style="btn-outline-success-transparent")
+																option father
+																option mother
+																option douther
+																option son
+													li.user-list__item
+														.user-list__item-img
+															img(src="assets/img/global/mother.svg")
+														.user-list__item-name Jeanne Davos
+														.user-list__item-type
+															select.selectpicker.show-tick(data-width="fit", data-style="btn-outline-success-transparent")
+																option mother
+																option father
+																option douther
+																option son
+													li.user-list__item
+														.user-list__item-img
+															img(src="assets/img/global/son.svg")
+														.user-list__item-name Alfred Davos
+														.user-list__item-type
+															select.selectpicker.show-tick(data-width="fit", data-style="btn-outline-success-transparent")
+																option son
+																option father
+																option mother
+																option douther
+											.col-xs-5
+												include global/felicitations
 
-
+							.row.pb-6.mb-3
 								.col-xs-12
 									.panel.panel-success.pt-4
 										.geste-slider
@@ -237,11 +283,126 @@ html(lang="en")
 
 
 
-	script(src="assets/js/multi-step-modal.js")
 	script.
-		sendEvent = function (sel, step) {
-			$(sel).trigger('next.m.' + step);
-		}
+		$("#a1").click(function (e) {
+			e.preventDefault();
+			$('.highcharts-legend-item:nth-child(1)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a2").click(function (e) {
+			e.preventDefault();
+			$('.highcharts-legend-item:nth-child(2)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a3").click(function (e) {
+			e.preventDefault();
+			$('.highcharts-legend-item:nth-child(3)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a4").click(function (e) {
+			e.preventDefault();
+			$('.highcharts-legend-item:nth-child(4)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+		$("#a5").click(function (e) {
+			e.preventDefault();
+			$('.highcharts-legend-item:nth-child(5)').click();
+			$(this).toggleClass("leg-clicked");
+		});
+
+		$('#container').highcharts({
+			chart: {
+				backgroundColor: '#fff',
+				type: 'line'
+			},
+			title: {
+				text: '' //' title'
+			},
+			legend: {
+				align: 'center',
+				x: 0,
+				y: 10,
+				backgroundColor: '#272D31',
+				color: '#fff',
+				layout: 'horizontal',
+				floating: true,
+				verticalAlign: 'top',
+				shadow: false,
+				border: 0,
+				borderRadius: 0,
+				borderWidth: 0
+			},
+
+			subtitle: {
+				text: ''
+			},
+			xAxis: {
+				allowDecimals: true,
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			},
+			yAxis: {
+				title: {
+					text: ''
+				},
+				labels: {
+					formatter: function () {
+						return this.value / 1 + 'kg';
+					}
+				},
+
+				gridLineWidth: 1,
+				minorGridLineWidth: 0
+			},
+			tooltip: {
+				pointFormat: '{series.name} <p class="text-center">{point.y:,.0f} kg</p>'
+			},
+			plotOptions: {
+				area: {
+					//pointStart: 2,
+					marker: {
+						enabled: true,
+						symbol: 'circle',
+						radius: 5,
+						states: {
+							hover: {
+								enabled: true
+							}
+						}
+					}
+				}
+			},
+			series: [{
+				name: 'yellow',
+				data: [22, 40, 38, 53, 34, 25],
+				color: '#fdb32a'
+			}, {
+				name: 'pink',
+				data: [16, 23, 39, 62, 44, 9],
+				color: '#DA2A87'
+			}, {
+				name: 'green',
+				data: [8, 33, 22, 56, 56, 18],
+				color: '#93BF4C'
+			}, {
+				name: 'blue',
+				data: [12, 28, 31, 69, 12, 54],
+				color: '#11C5E7'
+			}, {
+				name: 'dark',
+				data: [55, 25, 35, 15, 54, 50],
+				color: 'rgba(73, 80, 86, 0.47)'
+			}
+			]
+		});
+		$('#add-chart-data').click(function () {
+			var chart = $('#container').highcharts();
+			chart.addSeries({
+				id: 'abc',
+				name: 'new data',
+				data: [05, 21, 77, 55, 33, 44],
+				color: '#16a085'
+			});
+		});
 
 
 
