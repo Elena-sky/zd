@@ -60,7 +60,8 @@ html(lang="en")
 													img.img-responsive(src='assets/img/global/introduce-data.gif', alt='#')
 												.col-xs-8
 													h2.text-black.text-center.mt-0 L'info du juor
-													p.text-left Le Lorem Ipsum est simplement du faux texte employé dans la composition et
+													p.text-left.mb-3 Le Lorem Ipsum est simplement du faux texte employé dans la
+														| composition et
 														| la mise	en page avant impression. Le Lorem Ipsum est le faux texte standard
 														| de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla
 														| ensemble des morceaux de texte pour réaliser un livre spécimen de polices de
@@ -71,18 +72,23 @@ html(lang="en")
 
 								.col-sm-5.col-xs-12.oneHeight
 									.row.mb-5
-										a(href="#").btn-settings
-											.fa.fa-cog
+										.littleMenu.dropdown
+											button(id="littleMenu",data-toggle="dropdown").btn-settings.dropdown-toggle
+												.fa.fa-cog
+											.dropdown-menu(aria-labelledby="littleMenu")
+												a.dropdown-item(href="#") Action
+												a.dropdown-item(href="#") Another action
+												a.dropdown-item(href="#") Something else here
 									.row.mb-20
-										.col-xs-9.mb-20
+										.col-xs-8.col-xs-offset-3.mb-20
 											.fun-fact
 												.fun-fact-img
 													img(src="assets/img/global/trash.svg")
 												.fun-fact-label.bg-warning
 													span + 12 %
-										.col-xs-9
+										.col-xs-8.col-xs-offset-3
 											.fun-fact.fun-fact-left
-												.fun-fact-label.bg-success
+												.fun-fact-label.bg-success.text-left
 													span - 9 kg
 												.fun-fact-img
 													img(src="assets/img/global/weight.svg")

@@ -483,8 +483,15 @@ button.close{
 }
 .btn-settings{
 	float: right;
+	border: 0;
+	background: transparent;
 	.fa{
 		font-size: 3rem;
 		color: $warning;
+	}
+	&:hover,
+	&:focus{
+		cursor: pointer;
+		outline: none;
 	}
 }

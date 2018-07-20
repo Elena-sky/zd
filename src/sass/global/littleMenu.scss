@@ -1,0 +1,15 @@
+.littleMenu{
+	display: block;
+	position: relative;
+	float: right;
+	.dropdown-menu{
+		width: 200px;
+		right: 0;
+		left: auto;
+		padding: 1rem;
+	}
+	.dropdown-item{
+		display: block;
+		color: $dark;
+	}
+}
