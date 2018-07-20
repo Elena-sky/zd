@@ -56,6 +56,21 @@ $bubble-warning-color : $warning;
 			left: -25px;
 		}
 	}
+	&.bubble-right{
+		right: 0;
+		top: 20%;
+		&:before{
+			content: "";
+			width: 60px;
+			height: 60px;
+			display: block;
+			border: 2px solid $success;
+			transform: skewX(40deg);
+			position: absolute;
+			background: $white;
+			right: -25px;
+		}
+	}
 	&.bubble-bottom-right{
 		&:before{
 			bottom: -20px;
@@ -82,6 +97,12 @@ $bubble-warning-color : $warning;
 		.bubble-right:after{
 			border-top-color:transparent;
 			border-right-color: rgba( $bubble-primary-color, .28) ;
+		}
+	}
+	&.bubble-dark{
+		border: 2px solid $black;
+		&.bubble-right:before{
+			border-color: $black;
 		}
 	}
 	&.bubble-info{
